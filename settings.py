@@ -1,4 +1,9 @@
-# Django settings for SpectrumAggregator project.
+# Django settings for politoscape project.
+import os
+import django
+
+DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -12,7 +17,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'C:\\Users\\Jonathan\\My Documents\\Aptana Studio 3 Workspace\\SpectrumAggregator\\rss.sqlite',                      # Or path to database file if using sqlite3.
+        'NAME': SITE_ROOT + '/rss.sqlite',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -100,13 +105,13 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'SpectrumAggregator.urls'
+ROOT_URLCONF = 'urls.py'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    "C:/Users/Jonathan/My Documents/Aptana Studio 3 Workspace/SpectrumAggregator/templates"
+    os.path.join(SITE_ROOT, 'templates')
 )
 
 INSTALLED_APPS = (
