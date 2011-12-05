@@ -109,77 +109,155 @@
   
   <!-- graph itself -->
   <div class="container">
-  
+ 
     <!-- Dems -->
-    <div class="dems" id="dem1" style="height:5%; float:left;">
-  
-    </div>
-    <div class="content" id="dcontent1_2">
-  	{% if latest_entries %}
-    <ul>
-    {% for entry in latest_entries %}
-        <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-     	{{ entry.content|safe }}
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}    </div>
-    <div class="dems" id="dem2" style="height:10%; float:left;">
-    </div>
+    <div class="dems" id="dem1" style="height:5%; float:left;"></div>
+    <div class="content" id="dcontent1_2 }}">
+		{% for entry in grouped_entries.0 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
+ 	</div>
+
+ 
+    <div class="dems" id="dem2" style="height:10%; float:left;"></div>
     <div class="content" id="dcontent2_3">
+		{% for entry in grouped_entries.1 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
     </div>
-    <div class="dems" id="dem3" style="height:19%; float:left;">
-    </div>
+    <div class="dems" id="dem3" style="height:19%; float:left;"></div>
     <div class="content" id="dcontent3_4">
+		{% for entry in grouped_entries.2 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
     </div>
-    <div class="dems" id="dem4" style="height:26%; float:left;">
-    </div>
+    <div class="dems" id="dem4" style="height:26%; float:left;"></div>
     <div class="content" id="dcontent4_5">
+		{% for entry in grouped_entries.3 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
     </div>
-    <div class="dems" id="dem5" style="height:17%; float:left;">
-    </div>
+    <div class="dems" id="dem5" style="height:17%; float:left;"></div>
     <div class="content" id="dcontent5_6">
+		{% for entry in grouped_entries.4 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
     </div>
-    <div class="dems" id="dem6" style="height:11%; float:left;">
-    </div>
+    <div class="dems" id="dem6" style="height:11%; float:left;"></div>
     <div class="content" id="dcontent6_7">
+		{% for entry in grouped_entries.5 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
     </div>
-    <div class="dems" id="dem7" style="height:10%; float:left;">
-    </div>
+    <div class="dems" id="dem7" style="height:10%; float:left;"></div>
     <div class="content" id="dcontent7_8">
+		<ul>
+		{% for entry in grouped_entries.6 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
+    	</ul>
     </div>
   
     <!-- Reps -->
-    <div class="reps" id="rep1" style="height:9%; float:left;">
-    </div>
+    <div class="reps" id="rep1" style="height:9%; float:left;"></div>
     <div class="content" id="rcontent1_2">
+		{% for entry in grouped_entries.7 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
     </div>
-    <div class="reps" id="rep2" style="height:13%; float:left;">
-    </div>
+    <div class="reps" id="rep2" style="height:13%; float:left;"></div>
     <div class="content" id="rcontent2_3">
+		{% for entry in grouped_entries.8 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
     </div>
-    <div class="reps" id="rep3" style="height:14%; float:left;">
-    </div>
+    <div class="reps" id="rep3" style="height:14%; float:left;"></div>
     <div class="content" id="rcontent3_4">
+		{% for entry in grouped_entries.9 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
     </div>
-    <div class="reps" id="rep4" style="height:32%; float:left;">
-    </div>
+    <div class="reps" id="rep4" style="height:32%; float:left;"></div>
     <div class="content" id="rcontent4_5">
+		{% for entry in grouped_entries.10 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
     </div>
-    <div class="reps" id="rep5" style="height:18%; float:left;">
-    </div>
+    <div class="reps" id="rep5" style="height:18%; float:left;"></div>
     <div class="content" id="rcontent5_6">
+		{% for entry in grouped_entries.11 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
     </div>
-    <div class="reps" id="rep6" style="height:9%; float:left;">
-    </div>
+    <div class="reps" id="rep6" style="height:9%; float:left;"></div>
     <div class="content" id="rcontent6_7">
+		{% for entry in grouped_entries.12 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
     </div>
-    <div class="reps" id="rep7" style="height:3%; float:left;">
-    </div>
+    <div class="reps" id="rep7" style="height:3%; float:left;"></div>
     <div class="content" id="rcontent7_8">
+		{% for entry in grouped_entries.13 %}
+  			<li>
+				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
+				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				{{ entry.content|safe }}
+    		</li>
+    	{% endfor %}
     </div>
-
+-->    
   </div>
 
   <!-- footer -->

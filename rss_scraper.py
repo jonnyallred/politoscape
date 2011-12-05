@@ -12,6 +12,7 @@ import threading
 import Queue
 from time import strftime
 import settings
+import csv
  
 import feedparser     # available at http://feedparser.org
  
@@ -21,6 +22,7 @@ feeds_to_retrieve = Queue.Queue(0)
 entries_to_process = Queue.Queue(THREAD_LIMIT)
  
 DATABASE = settings.DATABASES['default']['NAME']
+feeds_file = "feeds.csv" 
  
 #connect to the sqlite db
 conn = sqlite3.connect(DATABASE)
@@ -28,13 +30,16 @@ conn.row_factory = sqlite3.Row
 c = conn.cursor()
  
 #insert initial values into feed database
-rss_feeds = (('http://feeds.gawker.com/lifehacker/vip', 'lifehacker', 0),
-             ('http://xkcd.com/rss.xml','xkcd', 1),
-             ('http://feeds.wsjonline.com/wsj/xml/rss/3_7011.xml', 'wsj', -1),
-             )
-for info in rss_feeds:
-    c.execute("INSERT INTO rss_feed(url, name, score) VALUES('%s', '%s', %d);" % info) #url, name, score
+#rss_feeds = (('http://feeds.gawker.com/lifehacker/vip', 'lifehacker', 0),
+#             ('http://xkcd.com/rss.xml','xkcd', 1),
+#             ('http://feeds.wsjonline.com/wsj/xml/rss/3_7011.xml', 'wsj', -1),
+#             )
 
+with open(feeds_file, 'rb') as f:
+    reader = csv.reader(f)
+    for info in reader:
+        c.execute("INSERT INTO rss_feed(url, name, score) VALUES('%s', '%s', %d);" % (info[0],info[2],int(info[3]))) #url, name, score
+        
 feeds = c.execute('SELECT id, url, score FROM rss_feed').fetchall()
  
 def store_entries(id, items, score=0):

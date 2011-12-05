@@ -17,8 +17,17 @@ def entries(request, feed_id):
     return HttpResponse("The feeds for feed %s." % feed_id)
 
 def politoscape(request):
-    latest_entries = Entry.objects.all().order_by('-date')[:5]
+    groups = range(-7,7)
+    
+    latest_entries = Entry.objects.all().order_by('-date')
+    grouped_entries = list()
+    
+    for group in groups:
+        grouped_entries.append(latest_entries.filter(score=group)[:5])
+        
+    
     t = loader.get_template('rss/political_index.html')
     c = Context ({
-        'latest_entries': latest_entries})
+        'grouped_entries': grouped_entries, 'groups' : groups, 
+        'latest_entires': latest_entries})
     return HttpResponse(t.render(c))
