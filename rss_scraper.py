@@ -35,10 +35,10 @@ c = conn.cursor()
 #             ('http://feeds.wsjonline.com/wsj/xml/rss/3_7011.xml', 'wsj', -1),
 #             )
 
-with open(feeds_file, 'rb') as f:
-    reader = csv.reader(f)
-    for info in reader:
-        c.execute("INSERT INTO rss_feed(url, name, score) VALUES('%s', '%s', %d);" % (info[0],info[2],int(info[3]))) #url, name, score
+#with open(feeds_file, 'rb') as f:
+#    reader = csv.reader(f)
+#    for info in reader:
+#        c.execute("INSERT INTO rss_feed(url, name, score) VALUES('%s', '%s', %d);" % (info[0],info[2],int(info[3]))) #url, name, score
         
 feeds = c.execute('SELECT id, url, score FROM rss_feed').fetchall()
  

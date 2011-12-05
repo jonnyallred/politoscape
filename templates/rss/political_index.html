@@ -76,6 +76,25 @@
 	  font-family:inherit;
 	  color:#A4A4A4;
   }
+  
+  ul.content_list {
+      list-style-type: none;
+  }
+  .content_list li {
+  	border: 2px solid black;
+  	padding: 3px;
+  	margin-bottom: 5px;
+  }
+  
+  li h1.site {
+  	font-weight:bold;
+  	font-size:medium;
+  }
+  
+  li h2.title {
+  	text-decoration: underline;
+  	font-size:small;
+  }
 
   </style>
 
@@ -111,75 +130,87 @@
   <div class="container">
  
     <!-- Dems -->
-    <div class="dems" id="dem1" style="height:5%; float:left;"></div>
-    <div class="content" id="dcontent1_2 }}">
+    <div class="bar dems" id="dem1" style="height:5%; float:left;"></div>
+    <div class="content" id="dcontent1 }}">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.0 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
+    	</ul>
  	</div>
 
  
-    <div class="dems" id="dem2" style="height:10%; float:left;"></div>
-    <div class="content" id="dcontent2_3">
+    <div class="bar dems" id="dem2" style="height:10%; float:left;"></div>
+    <div class="content" id="dcontent2">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.1 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
+    	</ul>
     </div>
-    <div class="dems" id="dem3" style="height:19%; float:left;"></div>
-    <div class="content" id="dcontent3_4">
+    <div class="bar dems" id="dem3" style="height:19%; float:left;"></div>
+    <div class="content" id="dcontent3">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.2 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
+    	</ul>
     </div>
-    <div class="dems" id="dem4" style="height:26%; float:left;"></div>
-    <div class="content" id="dcontent4_5">
+    <div class="bar dems" id="dem4" style="height:26%; float:left;"></div>
+    <div class="content" id="dcontent4">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.3 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
+    	</ul>
     </div>
-    <div class="dems" id="dem5" style="height:17%; float:left;"></div>
-    <div class="content" id="dcontent5_6">
+    <div class="bar dems" id="dem5" style="height:17%; float:left;"></div>
+    <div class="content" id="dcontent5">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.4 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
+    	</ul>
     </div>
-    <div class="dems" id="dem6" style="height:11%; float:left;"></div>
-    <div class="content" id="dcontent6_7">
+    <div class="bar dems" id="dem6" style="height:11%; float:left;"></div>
+    <div class="content" id="dcontent6">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.5 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
+    	</ul>
     </div>
-    <div class="dems" id="dem7" style="height:10%; float:left;"></div>
-    <div class="content" id="dcontent7_8">
-		<ul>
+    <div class="bar dems" id="dem7" style="height:10%; float:left;"></div>
+    <div class="content" id="dcontent7">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.6 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
@@ -187,75 +218,89 @@
     </div>
   
     <!-- Reps -->
-    <div class="reps" id="rep1" style="height:9%; float:left;"></div>
-    <div class="content" id="rcontent1_2">
+    <div class="bar reps" id="rep1" style="height:9%; float:left;"></div>
+    <div class="content" id="rcontent1">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.7 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
+    	</ul>
     </div>
-    <div class="reps" id="rep2" style="height:13%; float:left;"></div>
-    <div class="content" id="rcontent2_3">
+    <div class="bar reps" id="rep2" style="height:13%; float:left;"></div>
+    <div class="content" id="rcontent2">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.8 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
+    	</ul>
     </div>
-    <div class="reps" id="rep3" style="height:14%; float:left;"></div>
-    <div class="content" id="rcontent3_4">
+    <div class="bar reps" id="rep3" style="height:14%; float:left;"></div>
+    <div class="content" id="rcontent3">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.9 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
+    	</ul>
     </div>
-    <div class="reps" id="rep4" style="height:32%; float:left;"></div>
-    <div class="content" id="rcontent4_5">
+    <div class="bar reps" id="rep4" style="height:32%; float:left;"></div>
+    <div class="content" id="rcontent4">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.10 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
+    	</ul>
     </div>
-    <div class="reps" id="rep5" style="height:18%; float:left;"></div>
-    <div class="content" id="rcontent5_6">
+    <div class="bar reps" id="rep5" style="height:18%; float:left;"></div>
+    <div class="content" id="rcontent5">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.11 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
+    	</ul>
     </div>
-    <div class="reps" id="rep6" style="height:9%; float:left;"></div>
-    <div class="content" id="rcontent6_7">
+    <div class="bar reps" id="rep6" style="height:9%; float:left;"></div>
+    <div class="content" id="rcontent6">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.12 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
+    	</ul>
     </div>
-    <div class="reps" id="rep7" style="height:3%; float:left;"></div>
-    <div class="content" id="rcontent7_8">
+    <div class="bar reps" id="rep7" style="height:3%; float:left;"></div>
+    <div class="content" id="rcontent7">
+    	<ul class="content_list">
 		{% for entry in grouped_entries.13 %}
   			<li>
-				<a href="{{entry.feed.url}}">{{ entry.feed.name }}</a><br />
-				<a href="{{ entry.url }}"> {{ entry.title }} </a><br />
+				<h1 class="site"><a href="{{entry.feed.url}}">{{ entry.feed.name }}</a></h1>
+				<h2 class="title"><a class="title" href="{{ entry.url }}"> {{ entry.title }} </a></h2>
 				{{ entry.content|safe }}
     		</li>
     	{% endfor %}
+    	</ul>
     </div>
 -->    
   </div>
@@ -288,41 +333,42 @@
   </div>
 
 <script>
-  $('.content').click(function() { 
+  $('.content_list').hide();
+  $('.bar').click(function() { 
     // get the width of the content box that was clicked on
-    var contentWidth = $(this).width();
+    var content = $(this).next();
+    var contentWidth = content.width();
+    var testobj;
     if (contentWidth < 500)
 	    {
 			// expand the content divs
-            $(this).animate({
+            content.animate({
 	          width: '+=780',
-            }, 500, function(){
+            }, 500, function(){ content.children().slideToggle();
           });
     
-		  // if it is one of the democratic bar graph elements
-		  if (this.id == "dcontent1_2" || this.id == "dcontent2_3" || this.id == "dcontent3_4" || this.id == "dcontent4_5" || this.id == "dcontent5_6" || this.id == "dcontent6_7" || this.id == "dcontent7_8")
-		  {
-		  	  // move notch right
-			  $('#notch').animate({
+		  // move notch right
+		  $('#notch').animate({
 				  left: '+=780px',
-			  }, 500, function(){
+			  }, 500, function(){  
 			  });
-		  }
+		  
         }
     else
     {
-         $(this).animate({
-		     width: '-=780',
-	     }, 500, function(){
-	     });
-		 
-		 // if it is one of the democratic bar graph elements 
-		 if (this.id == "dcontent1_2" || this.id == "dcontent2_3" || this.id == "dcontent3_4" || this.id == "dcontent4_5" || this.id == "dcontent5_6" || this.id == "dcontent6_7" || this.id == "dcontent7_8")
-		      // move notch left
-			  $('#notch').animate({
-				  left: '-=780px',
-			  }, 500, function(){
-			  });
+         content.children().slideToggle('fast',function(){
+	         content.animate({
+			     width: '-=780',
+		     }, 500, function(){
+		     });
+			 
+			 // if it is one of the democratic bar graph elements 
+			     // move notch left
+				  $('#notch').animate({
+					  left: '-=780px',
+				  }, 500, function(){ 
+				  });
+			});
     }
   });
 </script>
