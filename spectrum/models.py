@@ -17,13 +17,15 @@ class Source(models.Model):
         return self.name
 
     
-class Link(models.Model):
+class Story(models.Model):
     url = models.URLField()
     topic = models.ForeignKey(Topic)
     title = models.CharField(max_length=255)
     source = models.ForeignKey(Source)
     viewpoint = models.IntegerField()
     quality = models.IntegerField()
+    img = models.URLField()
+    date = models.DateField()
     
     def __unicode__(self):
         return "%s (%s)" % (self.title, self.source.name)
