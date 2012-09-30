@@ -1,12 +1,12 @@
 # Create your views here.
 from django.http import HttpResponse
-from rss.models import Feed, Entry
-from django.template import loader, Context
+from spectrum.models import Story
+from django.template import loader, Context, RequestContext
 
 def index(request):
     latest_stories = Story.objects.all().order_by('-date')[:5]
     t = loader.get_template('spectrum/index.html')
-    c = Context ({
+    c = RequestContext (request, {
         'latest_stories': latest_stories})
     return HttpResponse(t.render(c))
 
