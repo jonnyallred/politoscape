@@ -12,6 +12,8 @@ class Topic(models.Model):
 class Source(models.Model):
     url = models.URLField()
     name = models.CharField(max_length=255)
+    short_name = models.CharField(max_length=255, null=True, blank=True)
+    viewpoint = models.IntegerField()
 
     def __unicode__(self):
         return self.name
@@ -19,13 +21,14 @@ class Source(models.Model):
     
 class Story(models.Model):
     url = models.URLField()
-    topic = models.ForeignKey(Topic)
+    topic = models.ForeignKey(Topic, null=True, blank=True)
     title = models.CharField(max_length=255)
     source = models.ForeignKey(Source)
-    viewpoint = models.IntegerField()
-    quality = models.IntegerField()
-    img = models.URLField()
+    viewpoint = models.IntegerField(default=0)
+    quality = models.IntegerField(default=0)
+    img = models.URLField(null=True, blank=True)
     date = models.DateField()
+    content = models.TextField()
     
     def __unicode__(self):
         return "%s (%s)" % (self.title, self.source.name)
