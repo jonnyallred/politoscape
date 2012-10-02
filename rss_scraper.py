@@ -47,10 +47,10 @@ def store_entries(id, items, score=0):
     for entry in items:
         c.execute('SELECT id from spectrum_source WHERE url=?', (entry.link,))
         if len(c.fetchall()) == 0:
-            c.execute('INSERT INTO spectrum_story (source_id, url, title, content, date, viewpoint) \
-                       VALUES (?,?,?,?,?,?)', 
+            c.execute('INSERT INTO spectrum_story (source_id, url, title, content, date, viewpoint, quality) \
+                       VALUES (?,?,?,?,?,?,?)', 
                        (id, entry.link, entry.title, entry.summary, 
-                        strftime("%Y-%m-%d %H:%M:%S",entry.updated_parsed), score))
+                        strftime("%Y-%m-%d %H:%M:%S",entry.updated_parsed), score, 0))
  
 def retrieve_and_queue_entries():
     """ Get rss entries and queue them for processing """
