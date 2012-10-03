@@ -7,32 +7,43 @@
 <meta name="keywords" content="" />
 
 
-<link href="{{ STATIC_URL }}css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
 
-<script src="{{ STATIC_URL }}js/jquery-latest.js"></script>
-<script src="{{ STATIC_URL }}js/jquery-ui-.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery-latest.js"></script>
+<script src="js/jquery-ui-.min.js" type="text/javascript" charset="utf-8"></script>
 
-<script src="{{ STATIC_URL }}js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 
-<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.tinyscrollbar.js"></script>
-<link href="{{ STATIC_URL }}css/tinyscrollbar.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.tinyscrollbar.js"></script>
+<link href="css/tinyscrollbar.css" rel="stylesheet" type="text/css" />
 
-<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.simplyscroll.min.js"></script>
-<link rel="stylesheet" href="{{ STATIC_URL }}css/jquery.simplyscroll.css" media="all" type="text/css">
+<script type="text/javascript" src="js/jquery.simplyscroll.min.js"></script>
+<link rel="stylesheet" href="css/jquery.simplyscroll.css" media="all" type="text/css">
 
-<script type="text/javascript" src="{{ STATIC_URL }}libraries/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-<link rel="stylesheet" href="{{ STATIC_URL }}libraries/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+<script type="text/javascript" src="libraries/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" href="libraries/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 
-<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.watermark.min.js"></script>
+<script type="text/javascript" src="js/jquery.watermark.min.js"></script>
 
-<link href="{{ STATIC_URL }}css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		initIndexpage();
+	})	
+</script>
 </head>
 <body>
 	<div id="banner_band">
 		<div id="banner" class="grid_full">
-			<a href="index.html"><img src="{{ STATIC_URL }}images/logo.gif" height="55" width="269" alt="Politoscape logo" title="Politoscape logo" border="0" /></a>
-			<ul id="ul_banner_actions" class="h_nav">						
-				<li><a href="#login-box" id="li-login">Login</a></li>				
+			<a href="index.html"><img src="images/logo.gif" height="55" width="269" alt="Politoscape logo" title="Politoscape logo" border="0" /></a>
+			<ul id="ul_banner_actions" class="h_nav">									
+				<li class="loggedin">
+					Welcome,<br />
+					Username
+				</li>					
 				<li><a href="" id="li-refresh">Refresh</a></li>					
 				<li><a href="#search-box" id="li-search">Search</a></li>						
 				<li class="news-active">News</li>
@@ -48,137 +59,7 @@
 		</div>
 	</div>
 	<div id="main_channel">
-		<div id="contentbody" class="grid_full newsscroll">
-			<div class="grid_12">
-				<div id="art_1_1" class="news_article_scroll row1">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_1_1"><img src="{{ STATIC_URL }}images/clint.JPG" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here. Title goes here. Title goes here. Title goes here. Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_1_2" class="news_article_scroll row1">					
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_1_2"><img src="images/gop.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_1_3" class="news_article_scroll row1">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_1_3"><img src="images/dems.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_1_4" class="news_article_scroll row1 last">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_1_4"><img src="images/gop.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.</div></a>
-					</div>
-				</div> 
-			</div>
-			<div class="grid_12">
-				<div id="art_2_1" class="news_article_scroll">	
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_2_1"><img src="images/gop.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_2_2" class="news_article_scroll">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_2_2"><img src="images/dems.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_2_3" class="news_article_scroll">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_2_3"><img src="images/gop.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here. Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_2_4" class="news_article_scroll last">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_2_4"><img src="images/dems.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here. Title goes here.</div></a>
-					</div>
-				</div> 
-			</div>
-			<div class="grid_12">
-				<div id="art_3_1" class="news_article_scroll">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_3_1"><img src="images/dems.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here. Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_3_2" class="news_article_scroll">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_3_2"><img src="images/gop.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_3_3" class="news_article_scroll">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_3_3"><img src="images/dems.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here. Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_3_4" class="news_article_scroll last">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_3_4"><img src="images/gop.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here.</div></a>
-					</div>
-				</div> 
-			</div>
-			<div class="grid_12">
-				<div id="art_4_1" class="news_article_scroll">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_4_1"><img src="images/gop.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_4_2" class="news_article_scroll">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_4_2"><img src="images/dems.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here. Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_4_3" class="news_article_scroll">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_4_3"><img src="images/gop.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_4_4" class="news_article_scroll last">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_4_4"><img src="images/dems.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here. Title goes here.</div></a>
-					</div>
-				</div> 
-			</div>
-			<div class="grid_12">
-				<div id="art_5_1" class="news_article_scroll">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_5_1"><img src="images/dems.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here. Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_5_2" class="news_article_scroll">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_5_2"><img src="images/gop.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_5_3" class="news_article_scroll">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_5_3"><img src="images/dems.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here. Title goes here.</div></a>
-					</div>
-				</div> 
-				<div id="art_5_4" class="news_article_scroll last">
-					<div class="article_tile">
-						<a href="#article-display" class="news-link" id="id-art_5_4"><img src="images/gop.jpg" alt="Alt text" title="title text" />
-						<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.Title goes here.</div></a>
-					</div>
-				</div> 
-			</div>
+		<div id="contentbody" class="grid_fullwsscroll fullscale">
 			<div class="clear"></div>
 		</div>
 	</div>	
@@ -215,27 +96,47 @@
 		<p class="top">To continue commenting, please login or register through Facebook or email</p>
 		<div id="signin">		
 			<div id="fb-login-button"></div>
-			<p>or</p>
+			<div class="para">or</div>
 			
 			<form id="frm_signin" name="frm_signin" method="post" action="">
 				<div class="frm-social"><input type="text" name="email" value="" class="email" /></div>
 				<div class="frm-social"><input type="password" name="password" value="" class="password" /></div>
-				<div class="frm-social"><input type="image" name="site-login" id="site-login" value="" /></div>
+				<div class="frm-social"><input type="button" name="site-login" id="site-login" value="" /></div>
 			</form>
 		</div>
 		<div id="register">	
 			<div id="fb-register-button"></div>
-			<p class="no-margin">or</p>
+			<div class="para">or</div>
 			<form id="frm_signup" name="frm_signin" method="post" action="">
 				<div class="frm-social"><input type="text" name="firstname" value="" class="firstname" title="first name" /></div>
 				<div class="frm-social"><input type="text" name="lastname" value="" class="lastname" title="last name" /></div>
 				<div class="frm-social"><input type="text" name="email" value="" class="email" title="email address" /></div>
-				<div class="frm-social"><input type="image" name="site-register" id="site-register" value="" /></div>
+				<div class="frm-social"><input type="button" name="site-register" id="site-register" value="" /></div>
 			</form>
 		
 		</div>
 	</div>
+	
+	<div id="search-article-display" class="hidden">
+		<div id="search-article-header">
+			<a href="" class="article-btn-close">Close</a>	
+			<div id="article-credit">w York Times - September 5, 2012
+			</div>
+		</div>
+		<div class="search-article-scroll">
+			<h1>This is our search article</h1>	
+			<img src="images/gop.jpg" alt="" title="" align="right" />
+			<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam. Ut velque a lorem pharetra dapibus eu vel quam. In sit amet nisi pulvinar purus ullamcorper fermentum. Phasellus eget velit quis velit ullamcorper commodo vitae volutpat erat.</p>
+			<p>In hac habitasse platea dictumst. Suspendisse potenti. Duis mi lectus, condimentum eu faucibus in, hendrerit ut lacus. Maecenas sollicitudin pretium sapien ut congue.</p>
+			<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam. Ut velque a lorem pharetra dapibus eu vel quam. In sit amet nisi pulvinar purus ullamcorper fermentum. Phasellus eget velit quis velit ullamcorper commodo vitae volutpat erat.</p>
+			<p>In hac habitasse platea dictumst. Suspendisse potenti. Duis mi lectus, condimentum eu faucibus in, hendrerit ut lacus. Maecenas sollicitudin pretium sapien ut congue.</p>
+			<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam. Ut velque a lorem pharetra dapibus eu vel quam. In sit amet nisi pulvinar purus ullamcorper fermentum. Phasellus eget velit quis velit ullamcorper commodo vitae volutpat erat.</p>
+			<p>In hac habitasse platea dictumst. Suspendisse potenti. Duis mi lectus, condimentum eu faucibus in, hendrerit ut lacus. Maecenas sollicitudin pretium sapien ut congue.</p>
+		</div>	
+	</div>
+
 	<div id="modalCommentOverlay"></div>
-	<div id="modalOverlay"></div>
+	<div id="modalOverlay"></div>	
+	<div id="loadingDiv"></div>
 </body>
 </html>
