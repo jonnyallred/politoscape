@@ -27,6 +27,7 @@
 <script type="text/javascript" src="js/jquery.watermark.min.js"></script>
 
 <link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div id="banner_band">
@@ -48,15 +49,15 @@
 			</div>
 		</div>
 	</div>
-	<div id="main_channel">
+	<div id="main_channel">					
+		<div class="grid_full">
+			<div class="page_title">
+				<h1>ABOUT</h1>
+			</div>	
+		</div>	
 		<div id="contentbody" class="grid_full">						
-			<div class="grid_full">
-				<div class="page_title">
-					<h1>ABOUT</h1>
-				</div>	
-			</div>						
-			<div class="grid_9 indent_2">
-				<div class="copy_article">
+			<div class="grid_10 indent_1">
+				<div class="copy_article large">
 					<p>Politoscape is a political news aggregator that places articles on the political spectrum from the left to the right. People are forced into filter bubbles on the web, preventing people from exploring different ideas. We want to help people burst from this bubble and be exposed to quality ideas on the web in politics and give tools to users on the web to engage in politics.</p>
 					
 					<p>We are based in the Harvard iLab mentored by professors from the Harvard School of Engineering and Applied Sciences. We are also recipients of the Harvard Insitute of Politics Gov 2.0 Fund.</p>
@@ -86,32 +87,54 @@
 			</ul>
 		</div>
 	</div>
+	
 	<div id="facebook-login" class="hidden">
 		<div class="facebook-close"><a href="" class="btn-close">Close</a></div>	
 		<p class="top">To continue commenting, please login or register through Facebook or email</p>
 		<div id="signin">		
 			<div id="fb-login-button"></div>
-			<p>or</p>
+			<div class="para">or</div>
 			
 			<form id="frm_signin" name="frm_signin" method="post" action="">
 				<div class="frm-social"><input type="text" name="email" value="" class="email" /></div>
 				<div class="frm-social"><input type="password" name="password" value="" class="password" /></div>
-				<div class="frm-social"><input type="image" name="site-login" id="site-login" value="" /></div>
+				<div class="frm-social"><input type="button" name="site-login" id="site-login" value="" /></div>
 			</form>
 		</div>
 		<div id="register">	
 			<div id="fb-register-button"></div>
-			<p class="no-margin">or</p>
+			<div class="para">or</div>
 			<form id="frm_signup" name="frm_signin" method="post" action="">
 				<div class="frm-social"><input type="text" name="firstname" value="" class="firstname" title="first name" /></div>
 				<div class="frm-social"><input type="text" name="lastname" value="" class="lastname" title="last name" /></div>
 				<div class="frm-social"><input type="text" name="email" value="" class="email" title="email address" /></div>
-				<div class="frm-social"><input type="image" name="site-register" id="site-register" value="" /></div>
+				<div class="frm-social"><input type="button" name="site-register" id="site-register" value="" /></div>
 			</form>
 		
 		</div>
 	</div>
+	
+	<div id="search-article-display" class="hidden">
+		<div id="search-article-header">
+			<a href="" class="article-btn-close">Close</a>	
+			<div id="article-credit">
+				New York Times - September 5, 2012
+			</div>
+		</div>
+		<div class="search-article-scroll">
+			<h1>This is our search article</h1>	
+			<img src="images/gop.jpg" alt="" title="" align="right" />
+			<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam. Ut vel neque a lorem pharetra dapibus eu vel quam. In sit amet nisi pulvinar purus ullamcorper fermentum. Phasellus eget velit quis velit ullamcorper commodo vitae volutpat erat.</p>
+			<p>In hac habitasse platea dictumst. Suspendisse potenti. Duis mi lectus, condimentum eu faucibus in, hendrerit ut lacus. Maecenas sollicitudin pretium sapien ut congue.</p>
+			<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam. Ut vel neque a lorem pharetra dapibus eu vel quam. In sit amet nisi pulvinar purus ullamcorper fermentum. Phasellus eget velit quis velit ullamcorper commodo vitae volutpat erat.</p>
+			<p>In hac habitasse platea dictumst. Suspendisse potenti. Duis mi lectus, condimentum eu faucibus in, hendrerit ut lacus. Maecenas sollicitudin pretium sapien ut congue.</p>
+			<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam. Ut vel neque a lorem pharetra dapibus eu vel quam. In sit amet nisi pulvinar purus ullamcorper fermentum. Phasellus eget velit quis velit ullamcorper commodo vitae volutpat erat.</p>
+			<p>In hac habitasse platea dictumst. Suspendisse potenti. Duis mi lectus, condimentum eu faucibus in, hendrerit ut lacus. Maecenas sollicitudin pretium sapien ut congue.</p>
+		</div>	
+	</div>
+	
 	<div id="modalCommentOverlay"></div>
 	<div id="modalOverlay"></div>
+	<div id="loadingDiv"></div>
 </body>
 </html>

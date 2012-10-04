@@ -1,0 +1,876 @@
+#us-map {
+	position:relative;
+	margin:40px auto;
+	width:700px;
+	height:442px;
+	background: url('../images/states/stats_700.gif') top center  no-repeat;
+}
+
+#ak {
+	position:absolute;
+	top:324px;
+	left:1px;
+	width:159px;
+	height:118px;
+	background: url('../images/states/ak-n.gif') top center  no-repeat;
+}
+
+#hi {
+	position:absolute;
+	top:382px;
+	left:173px;
+	width:86px;
+	height:55px;
+	background: url('../images/states/hi-n.gif') top center  no-repeat;
+}
+
+#wa {
+	position:absolute;
+	top:0;
+	left:47px;
+	width:88px;
+	height:63px;
+	background: url('../images/states/wa-n.gif') top center  no-repeat;
+}
+
+#or {
+	position:absolute;
+	top:39px;
+	left:23px;
+	width:106px;
+	height:88px;
+	background: url('../images/states/or-n.gif') top center  no-repeat;
+}
+
+#ca {
+	position:absolute;
+	top:106px;
+	left:12px;
+	width:107px;
+	height:178px;
+	background: url('../images/states/ca-n.gif') top center  no-repeat;
+}
+
+#id {
+	position:absolute;
+	top:16px;
+	left:109px;
+	width:78px;
+	height:126px;
+	background: url('../images/states/id-n.gif') top center  no-repeat;
+}
+
+#nv {
+	position:absolute;
+	top:119px;
+	left:59px;
+	width:86px;
+	height:132px;
+	background: url('../images/states/nv-n.gif') top center  no-repeat;
+}
+
+#mt {
+	position:absolute;
+	top:18px;
+	left:141px;
+	width:135px;
+	height:86px;
+	background: url('../images/states/mt-n.gif') top center  no-repeat;
+}
+
+#wy {
+	position:absolute;
+	top:94px;
+	left:178px;
+	width:92px;
+	height:78px;
+	background: url('../images/states/wy-n.gif') top center  no-repeat;
+}
+
+#ut {
+	position:absolute;
+	top:136px;
+	left:129px;
+	width:74px;
+	height:95px;
+	background: url('../images/states/ut-n.gif') top center  no-repeat;
+}
+
+#az {
+	position:absolute;
+	top:221px;
+	left:103px;
+	width:90px;
+	height:99px;
+	background: url('../images/states/az-n.gif') top center  no-repeat;
+}
+
+#co {
+	position:absolute;
+	top:165px;
+	left:193px;
+	width:96px;
+	height:76px;
+	background: url('../images/states/co-n.gif') top center  no-repeat;
+}
+
+#nm {
+	position:absolute;
+	top:232px;
+	left:179px;
+	width:94px;
+	height:93px;
+	background: url('../images/states/nm-n.gif') top center  no-repeat;
+}
+
+#nd {
+	position:absolute;
+	top:37px;
+	left:271px;
+	width:86px;
+	height:56px;
+	background: url('../images/states/nd-n.gif') top center  no-repeat;
+}
+
+#sd {
+	position:absolute;
+	top:89px;
+	left:266px;
+	width:92px;
+	height:59px;
+	background: url('../images/states/sd-n.gif') top center  no-repeat;
+}
+
+#ne {
+	position:absolute;
+	top:139px;
+	left:264px;
+	width:108px;
+	height:54px;
+	background: url('../images/states/ne-n.gif') top center  no-repeat;
+}
+
+#ks {
+	position:absolute;
+	top:192px;
+	left:284px;
+	width:98px;
+	height:52px;
+	background: url('../images/states/ks-n.gif') top center  no-repeat;
+}
+
+#ok {
+	position:absolute;
+	top:240px;
+	left:272px;
+	width:115px;
+	height:60px;
+	background: url('../images/states/ok-n.gif') top center  no-repeat;
+}
+
+#tx {
+	position:absolute;
+	top:248px;
+	left:215px;
+	width:185px;
+	height:178px;
+	background: url('../images/states/tx-n.gif') top center  no-repeat;
+}
+
+#mn {
+	position:absolute;
+	top:35px;
+	left:350px;
+	width:86px;
+	height:97px;
+	background: url('../images/states/mn-n.gif') top center  no-repeat;
+}
+
+#ia {
+	position:absolute;
+	top:132px;
+	left:355px;
+	width:79px;
+	height:52px;
+	background: url('../images/states/ia-n.gif') top center  no-repeat;
+}
+
+#mo {
+	position:absolute;
+	top:180px;
+	left:366px;
+	width:87px;
+	height:77px;
+	background: url('../images/states/mo-n.gif') top center  no-repeat;
+}
+
+#ar {
+	position:absolute;
+	top:249px;
+	left:383px;
+	width:64px;
+	height:57px;
+	background: url('../images/states/ar-n.gif') top center  no-repeat;
+}
+
+#la {
+	position:absolute;
+	top:302px;
+	left:391px;
+	width:78px;
+	height:67px;
+	background: url('../images/states/la-n.gif') top center  no-repeat;
+}
+
+#wi {
+	position:absolute;
+	top:74px;
+	left:399px;
+	width:69px;
+	height:74px;
+	background: url('../images/states/wi-n.gif') top center  no-repeat;
+}
+
+#il {
+	position:absolute;
+	top:145px;
+	left:418px;
+	width:53px;
+	height:94px;
+	background: url('../images/states/il-n.gif') top center  no-repeat;
+}
+
+#mi {
+	position:absolute;
+	top:63px;
+	left:426px;
+	width:100px;
+	height:94px;
+	background: url('../images/states/mi-n.gif') top center  no-repeat;
+}
+
+#in {
+	position:absolute;
+	top:155px;
+	left:466px;
+	width:40px;
+	height:69px;
+	background: url('../images/states/in-n.gif') top center  no-repeat;
+}
+
+#ky {
+	position:absolute;
+	top:197px;
+	left:451px;
+	width:97px;
+	height:49px;
+	background: url('../images/states/ky-n.gif') top center  no-repeat;
+}
+
+#oh {
+	position:absolute;
+	top:142px;
+	left:501px;
+	width:58px;
+	height:63px;
+	background: url('../images/states/oh-n.gif') top center  no-repeat;
+}
+
+#tn {
+	position:absolute;
+	top:232px;
+	left:444px;
+	width:111px;
+	height:39px;
+	background: url('../images/states/tn-n.gif') top center  no-repeat;
+}
+
+#ms {
+	position:absolute;
+	top:268px;
+	left:428px;
+	width:48px;
+	height:81px;
+	background: url('../images/states/ms-n.gif') top center  no-repeat;
+}
+
+#al {
+	position:absolute;
+	top:266px;
+	left:472px;
+	width:51px;
+	height:82px;
+	background: url('../images/states/al-n.gif') top center  no-repeat;
+}
+
+#fl {
+	position:absolute;
+	top:329px;
+	left:485px;
+	width:121px;
+	height:92px;
+	background: url('../images/states/fl-n.gif') top center  no-repeat;
+}
+
+#ga {
+	position:absolute;
+	top:262px;
+	left:507px;
+	width:71px;
+	height:75px;
+	background: url('../images/states/ga-n.gif') top center  no-repeat;
+}
+
+#pa {
+	position:absolute;
+	top:129px;
+	left:555px;
+	width:75px;
+	height:50px;
+	background: url('../images/states/pa-n.gif') top center  no-repeat;
+}
+
+#wv {
+	position:absolute;
+	top:166px;
+	left:539px;
+	width:60px;
+	height:58px;
+	background: url('../images/states/wv-n.gif') top center  no-repeat;
+}
+
+#va {
+	position:absolute;
+	top:178px;
+	left:535px;
+	width:96px;
+	height:57px;
+	background: url('../images/states/va-n.gif') top center  no-repeat;
+}
+
+#nc {
+	position:absolute;
+	top:219px;
+	left:523px;
+	width:115px;
+	height:52px;
+	background: url('../images/states/nc-n.gif') top center  no-repeat;
+}
+
+#sc {
+	position:absolute;
+	top:256px;
+	left:537px;
+	width:67px;
+	height:51px;
+	background: url('../images/states/sc-n.gif') top center  no-repeat;
+}
+
+#ny {
+	position:absolute;
+	top:75px;
+	left:563px;
+	width:96px;
+	height:74px;
+	background: url('../images/states/ny-n.gif') top center  no-repeat;
+}
+
+#vt {
+	position:absolute;
+	top:70px;
+	left:628px;
+	width:23px;
+	height:42px;
+	background: url('../images/states/vt-n.gif') top center  no-repeat;
+}
+
+#nh {
+	position:absolute;
+	top:65px;
+	left:645px;
+	width:22px;
+	height:45px;
+	background: url('../images/states/nh-n.gif') top center  no-repeat;
+}
+
+#me {
+	position:absolute;
+	top:22px;
+	left:652px;
+	width:49px;
+	height:77px;
+	background: url('../images/states/me-n.gif') top center  no-repeat;
+}
+
+#ma {
+	position:absolute;
+	top:101px;
+	left:636px;
+	width:48px;
+	height:30px;
+	background: url('../images/states/ma-n.gif') top center  no-repeat;
+}
+
+#ri {
+	position:absolute;
+	top:119px;
+	left:659px;
+	width:11px;
+	height:12px;
+	background: url('../images/states/ri-n.gif') top center  no-repeat;
+}
+
+#ct {
+	position:absolute;
+	top:120px;
+	left:639px;
+	width:23px;
+	height:23px;
+	background: url('../images/states/ct-n.gif') top center  no-repeat;
+}
+
+#nj {
+	position:absolute;
+	top:138px;
+	left:622px;
+	width:19px;
+	height:41px;
+	background: url('../images/states/nj-n.gif') top center  no-repeat;
+}
+
+#de {
+	position:absolute;
+	top:167px;
+	left:620px;
+	width:15px;
+	height:22px;
+	background: url('../images/states/de-n.gif') top center  no-repeat;
+}
+
+#md {
+	position:absolute;
+	top:166px;
+	left:568px;
+	width:72px;
+	height:48px;
+	background: url('../images/states/md-n.gif') top center  no-repeat;
+}
+
+#dc {
+	position:absolute;
+	top:186px;
+	left:610px;
+	width:72px;
+	height:48px;
+	background: url('../images/states/dc-n.gif') top center  no-repeat;
+}
+
+/* LEFT */
+#ak.left {
+	background: url('../images/states/ak-b.gif') top center  no-repeat;
+}
+
+#hi.left {
+	background: url('../images/states/hi-b.gif') top center  no-repeat;
+}
+
+#wa.left {
+	background: url('../images/states/wa-b.gif') top center  no-repeat;
+}
+
+#or.left {
+	background: url('../images/states/or-b.gif') top center  no-repeat;
+}
+
+#ca.left {
+	background: url('../images/states/ca-b.gif') top center  no-repeat;
+}
+
+#id.left {
+	background: url('../images/states/id-b.gif') top center  no-repeat;
+}
+
+#nv.left {
+	background: url('../images/states/nv-b.gif') top center  no-repeat;
+}
+
+#mt.left {
+	background: url('../images/states/mt-b.gif') top center  no-repeat;
+}
+
+#wy.left {
+	background: url('../images/states/wy-b.gif') top center  no-repeat;
+}
+
+#ut.left {
+	background: url('../images/states/ut-b.gif') top center  no-repeat;
+}
+
+#az.left {
+	background: url('../images/states/az-b.gif') top center  no-repeat;
+}
+
+#co.left {
+	background: url('../images/states/co-b.gif') top center  no-repeat;
+}
+
+#nm.left {
+	background: url('../images/states/nm-b.gif') top center  no-repeat;
+}
+
+#nd.left {
+	background: url('../images/states/nd-b.gif') top center  no-repeat;
+}
+
+#sd.left {
+	background: url('../images/states/sd-b.gif') top center  no-repeat;
+}
+
+#ne.left {
+	background: url('../images/states/ne-b.gif') top center  no-repeat;
+}
+
+#ks.left {
+	background: url('../images/states/ks-b.gif') top center  no-repeat;
+}
+
+#ok.left {
+	background: url('../images/states/ok-b.gif') top center  no-repeat;
+}
+
+#tx.left {
+	background: url('../images/states/tx-b.gif') top center  no-repeat;
+}
+
+#mn.left {
+	background: url('../images/states/mn-b.gif') top center  no-repeat;
+}
+
+#ia.left {
+	background: url('../images/states/ia-b.gif') top center  no-repeat;
+}
+
+#mo.left {
+	background: url('../images/states/mo-b.gif') top center  no-repeat;
+}
+
+#ar.left {
+	background: url('../images/states/ar-b.gif') top center  no-repeat;
+}
+
+#la.left {
+	background: url('../images/states/la-b.gif') top center  no-repeat;
+}
+
+#wi.left {
+	background: url('../images/states/wi-b.gif') top center  no-repeat;
+}
+
+#il.left {
+	background: url('../images/states/il-b.gif') top center  no-repeat;
+}
+
+#mi.left {
+	background: url('../images/states/mi-b.gif') top center  no-repeat;
+}
+
+#in.left {
+	background: url('../images/states/in-b.gif') top center  no-repeat;
+}
+
+#ky.left {
+	background: url('../images/states/ky-b.gif') top center  no-repeat;
+}
+
+#oh.left {
+	background: url('../images/states/oh-b.gif') top center  no-repeat;
+}
+
+#tn.left {
+	background: url('../images/states/tn-b.gif') top center  no-repeat;
+}
+
+#ms.left {
+	background: url('../images/states/ms-b.gif') top center  no-repeat;
+}
+
+#al.left {
+	background: url('../images/states/al-b.gif') top center  no-repeat;
+}
+
+#fl.left {
+	background: url('../images/states/fl-b.gif') top center  no-repeat;
+}
+
+#ga.left {
+	background: url('../images/states/ga-b.gif') top center  no-repeat;
+}
+
+#pa.left {
+	background: url('../images/states/pa-b.gif') top center  no-repeat;
+}
+
+#wv.left {
+	background: url('../images/states/wv-b.gif') top center  no-repeat;
+}
+
+#va.left {
+	background: url('../images/states/va-b.gif') top center  no-repeat;
+}
+
+#nc.left {
+	background: url('../images/states/nc-b.gif') top center  no-repeat;
+}
+
+#sc.left {
+	background: url('../images/states/sc-b.gif') top center  no-repeat;
+}
+
+#ny.left {
+	background: url('../images/states/ny-b.gif') top center  no-repeat;
+}
+
+#vt.left {
+	background: url('../images/states/vt-b.gif') top center  no-repeat;
+}
+
+#nh.left {
+	background: url('../images/states/nh-b.gif') top center  no-repeat;
+}
+
+#me.left {
+	background: url('../images/states/me-b.gif') top center  no-repeat;
+}
+
+#ma.left {
+	background: url('../images/states/ma-b.gif') top center  no-repeat;
+}
+
+#ri.left {
+	background: url('../images/states/ri-b.gif') top center  no-repeat;
+}
+
+#ct.left {
+	background: url('../images/states/ct-b.gif') top center  no-repeat;
+}
+
+#nj.left {
+	background: url('../images/states/nj-b.gif') top center  no-repeat;
+}
+
+#de.left {
+	background: url('../images/states/de-b.gif') top center  no-repeat;
+}
+
+#md.left {
+	background: url('../images/states/md-b.gif') top center  no-repeat;
+}
+
+#dc.left {
+	background: url('../images/states/dc-b.gif') top center  no-repeat;
+}
+
+/* RIGHT */
+#ak.right {
+	background: url('../images/states/ak-r.gif') top center  no-repeat;
+}
+
+#hi.right {
+	background: url('../images/states/hi-r.gif') top center  no-repeat;
+}
+
+#wa.right {
+	background: url('../images/states/wa-r.gif') top center  no-repeat;
+}
+
+#or.right {
+	background: url('../images/states/or-r.gif') top center  no-repeat;
+}
+
+#ca.right {
+	background: url('../images/states/ca-r.gif') top center  no-repeat;
+}
+
+#id.right {
+	background: url('../images/states/id-r.gif') top center  no-repeat;
+}
+
+#nv.right {
+	background: url('../images/states/nv-r.gif') top center  no-repeat;
+}
+
+#mt.right {
+	background: url('../images/states/mt-r.gif') top center  no-repeat;
+}
+
+#wy.right {
+	background: url('../images/states/wy-r.gif') top center  no-repeat;
+}
+
+#ut.right {
+	background: url('../images/states/ut-r.gif') top center  no-repeat;
+}
+
+#az.right {
+	background: url('../images/states/az-r.gif') top center  no-repeat;
+}
+
+#co.right {
+	background: url('../images/states/co-r.gif') top center  no-repeat;
+}
+
+#nm.right {
+	background: url('../images/states/nm-r.gif') top center  no-repeat;
+}
+
+#nd.right {
+	background: url('../images/states/nd-r.gif') top center  no-repeat;
+}
+
+#sd.right {
+	background: url('../images/states/sd-r.gif') top center  no-repeat;
+}
+
+#ne.right {
+	background: url('../images/states/ne-r.gif') top center  no-repeat;
+}
+
+#ks.right {
+	background: url('../images/states/ks-r.gif') top center  no-repeat;
+}
+
+#ok.right {
+	background: url('../images/states/ok-r.gif') top center  no-repeat;
+}
+
+#tx.right {
+	background: url('../images/states/tx-r.gif') top center  no-repeat;
+}
+
+#mn.right {
+	background: url('../images/states/mn-r.gif') top center  no-repeat;
+}
+
+#ia.right {
+	background: url('../images/states/ia-r.gif') top center  no-repeat;
+}
+
+#mo.right {
+	background: url('../images/states/mo-r.gif') top center  no-repeat;
+}
+
+#ar.right {
+	background: url('../images/states/ar-r.gif') top center  no-repeat;
+}
+
+#la.right {
+	background: url('../images/states/la-r.gif') top center  no-repeat;
+}
+
+#wi.right {
+	background: url('../images/states/wi-r.gif') top center  no-repeat;
+}
+
+#il.right {
+	background: url('../images/states/il-r.gif') top center  no-repeat;
+}
+
+#mi.right {
+	background: url('../images/states/mi-r.gif') top center  no-repeat;
+}
+
+#in.right {
+	background: url('../images/states/in-r.gif') top center  no-repeat;
+}
+
+#ky.right {
+	background: url('../images/states/ky-r.gif') top center  no-repeat;
+}
+
+#oh.right {
+	background: url('../images/states/oh-r.gif') top center  no-repeat;
+}
+
+#tn.right {
+	background: url('../images/states/tn-r.gif') top center  no-repeat;
+}
+
+#ms.right {
+	background: url('../images/states/ms-r.gif') top center  no-repeat;
+}
+
+#al.right {
+	background: url('../images/states/al-r.gif') top center  no-repeat;
+}
+
+#fl.right {
+	background: url('../images/states/fl-r.gif') top center  no-repeat;
+}
+
+#ga.right {
+	background: url('../images/states/ga-r.gif') top center  no-repeat;
+}
+
+#pa.right {
+	background: url('../images/states/pa-r.gif') top center  no-repeat;
+}
+
+#wv.right {
+	background: url('../images/states/wv-r.gif') top center  no-repeat;
+}
+
+#va.right {
+	background: url('../images/states/va-r.gif') top center  no-repeat;
+}
+
+#nc.right {
+	background: url('../images/states/nc-r.gif') top center  no-repeat;
+}
+
+#sc.right {
+	background: url('../images/states/sc-r.gif') top center  no-repeat;
+}
+
+#ny.right {
+	background: url('../images/states/ny-r.gif') top center  no-repeat;
+}
+
+#vt.right {
+	background: url('../images/states/vt-r.gif') top center  no-repeat;
+}
+
+#nh.right {
+	background: url('../images/states/nh-r.gif') top center  no-repeat;
+}
+
+#me.right {
+	background: url('../images/states/me-r.gif') top center  no-repeat;
+}
+
+#ma.right {
+	background: url('../images/states/ma-r.gif') top center  no-repeat;
+}
+
+#ri.right {
+	background: url('../images/states/ri-r.gif') top center  no-repeat;
+}
+
+#ct.right {
+	background: url('../images/states/ct-r.gif') top center  no-repeat;
+}
+
+#nj.right {
+	background: url('../images/states/nj-r.gif') top center  no-repeat;
+}
+
+#de.right {
+	background: url('../images/states/de-r.gif') top center  no-repeat;
+}
+
+#md.right {
+	background: url('../images/states/md-r.gif') top center  no-repeat;
+}
+
+#dc.right {
+	background: url('../images/states/dc-r.gif') top center  no-repeat;
+}
