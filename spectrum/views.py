@@ -4,7 +4,7 @@ from spectrum.models import Story
 from django.template import loader, Context, RequestContext
 
 def index(request):
-    latest_stories = Story.objects.all().order_by('-date')[:5]
+    latest_stories = Story.objects.all().order_by('-date')[:20]
     t = loader.get_template('spectrum/index.html')
     c = RequestContext (request, {
         'latest_stories': latest_stories})
