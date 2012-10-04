@@ -10,6 +10,12 @@ def index(request):
         'latest_stories': latest_stories})
     return HttpResponse(t.render(c))
 
+def article_query(request, viewpoint):
+    stories = Story.objects.filter(viewpoint=viewpoint)
+    t = loader.get_template('spectrum/article-query.html')
+    c = RequestContext (request, {'stories' : stories})
+    return HttpResponse(t.render(c))
+
 def detail(request, feed_id):
     return HttpResponse("You're looking at feed %s." % feed_id)
 

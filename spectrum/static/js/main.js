@@ -372,8 +372,8 @@ function reloadArticles(pValue) {
 	// center is 8
 	// right is 9 -16	 
 		 			
-	$.get("article-query.html", 
-	{ type: "jquery", pValue: pValue },
+	$.get("article_query/"+pValue+"/", 
+	{ },
 	function(data) {   
 		$('#contentbody').prepend(data);	
 		resizeFullArticles();		

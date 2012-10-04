@@ -27,7 +27,7 @@ class Story(models.Model):
     viewpoint = models.IntegerField(default=0)
     quality = models.IntegerField(default=0)
     img = models.URLField(null=True, blank=True)
-    date = models.DateField()
+    date = models.DateTimeField()
     content = models.TextField()
     
     def __unicode__(self):
