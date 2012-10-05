@@ -199,11 +199,11 @@ function resizeFullArticles() {
 	
 	$('.news-link').click(function(e) {
 		
-		var articleID = $(this).attr('id');
+		var articleID = $(this).attr('id').split("_")[1];
 		e.preventDefault();
 		
 		// Call to fake data query
-		$.get("article-preview.html", function(data) {	
+		$.get("article_preview/"+articleID, function(data) {	
 			$.fancybox(data,{	
 				'centerOnScroll' : true,				   
 				'showCloseButton': false,
@@ -397,88 +397,88 @@ function initSlider() {
 		slide: function(event, ui) {
 			switch (ui.value) {
 				case 0:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/1.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/1.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '26px');
 					$('.ui-slider .ui-slider-handle').css('left', '18px');
 				  break;
 				case 1:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/2.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/2.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '20px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 2:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/3.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/3.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '15px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 3:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/4.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/4.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '10px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 4:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/5.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/5.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '5px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 5:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/6.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/6.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '3px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 6:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/7.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/7.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '2px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 7:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/8.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/8.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '1px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 8:
 					// center
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/9.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/9.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '0');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 9:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/10.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/10.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '1px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 10:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/11.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/11.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '2px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 11:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/12.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/12.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '3px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 12:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/13.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/13.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '5px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 13:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/14.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/14.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '10px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 14:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/15.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/15.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '15px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 15:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/16.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/16.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '20px');
 					$('.ui-slider .ui-slider-handle').css('left', '0');
 				  break;
 				case 16:
-					$('.ui-slider .ui-slider-handle').css('background-image', 'url("images/17.png")');
+					$('.ui-slider .ui-slider-handle').css('background-image', 'url("/static/images/17.png")');
 					$('.ui-slider .ui-slider-handle').css('top', '26px');
 					$('.ui-slider .ui-slider-handle').css('left', '-18px');
 				  break;

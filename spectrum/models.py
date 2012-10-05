@@ -14,6 +14,7 @@ class Source(models.Model):
     name = models.CharField(max_length=255)
     short_name = models.CharField(max_length=255, null=True, blank=True)
     viewpoint = models.IntegerField()
+    img = models.URLField(null=True, blank=True)
 
     def __unicode__(self):
         return self.name

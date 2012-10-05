@@ -1,6 +1,7 @@
 # Django settings for politoscape project.
 import os
 import django
+import logging
 
 DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
@@ -109,3 +110,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'spectrum'
 )
+
+logging.basicConfig(
+    level = logging.DEBUG,
+    format = '%(asctime)s %(levelname)s %(message)s',
+    )

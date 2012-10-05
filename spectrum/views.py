@@ -16,6 +16,14 @@ def article_query(request, viewpoint):
     c = RequestContext (request, {'stories' : stories})
     return HttpResponse(t.render(c))
 
+def article_preview(request, article_id):
+    story = Story.objects.get(pk=article_id)
+    source = story.source
+    print source.img 
+    t = loader.get_template('spectrum/article-preview.html')
+    c = RequestContext (request, {'story' : story, 'source' : source})
+    return HttpResponse(t.render(c))
+
 def detail(request, feed_id):
     return HttpResponse("You're looking at feed %s." % feed_id)
 
@@ -23,13 +31,13 @@ def entries(request, feed_id):
     return HttpResponse("The feeds for feed %s." % feed_id)
 
 def politoscape(request):
-    groups = range(-7,7)
+    groups = range(-7,7) 
     
     latest_stories = Story.objects.all()
     grouped_stories = list()
     
     for group in groups:
-        grouped_stories.append(latest_entries.filter(viewpoint=group)[:5])
+        grouped_stories.append(latest_stories.filter(viewpoint=group)[:5])
         
     
     t = loader.get_template('spectrum/index.html')

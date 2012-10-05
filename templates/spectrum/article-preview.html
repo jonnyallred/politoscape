@@ -2,45 +2,45 @@
 	<div class="preview-close"><a href="" class="btn-close">Close</a></div>	
 	<div id="article-views">
 		<div id="preview-feature">
-			<a href="#article-display" class="news-link"><img src="images/clint.JPG" alt="Alt text" title="title text" />
-			<div class="preview-feature-title">Title goes here. Title goes here. Title goes here. Title goes here. Title goes here. Title goes here. Title goes here. Title goes here.</div></a>
+			<a href="{{ story.url }}" class="news-link"><img src="{{ STATIC_URL }}images/clint.JPG" alt="Alt text" title="title text" />
+			<div class="preview-feature-title"><p>{{ story.title }}</p><p>{{ source.name }}</p></div></a>
 		</div>
 		<div id="preview-other-carousel">
 			<div id="other-side"></div>				
 			<ul id="carousel-slider"  class="h_nav">
 			  	<li>				
 					<div class="article_carousel">
-						<a href="" class="news-link"><img src="images/gop.jpg" alt="Alt text" title="title text" />
+						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/gop.jpg" alt="Alt text" title="title text" />
 						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
 					</div>	
 				</li>
 				<li>		
 					<div class="article_carousel">
-						<a href="" class="news-link"><img src="images/dems.jpg" alt="Alt text" title="title text" />
+						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/dems.jpg" alt="Alt text" title="title text" />
 						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
 					</div>
 				</li>
 				<li>	
 					<div class="article_carousel">
-						<a href="" class="news-link"><img src="images/gop.jpg" alt="Alt text" title="title text" />
+						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/gop.jpg" alt="Alt text" title="title text" />
 						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
 					</div>		
 				</li>
 				<li>		
 					<div class="article_carousel">
-						<a href="" class="news-link"><img src="images/dems.jpg" alt="Alt text" title="title text" />
+						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/dems.jpg" alt="Alt text" title="title text" />
 						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
 					</div>
 				</li>
 				<li>	
 					<div class="article_carousel">
-						<a href="" class="news-link"><img src="images/gop.jpg" alt="Alt text" title="title text" />
+						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/gop.jpg" alt="Alt text" title="title text" />
 						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
 					</div>	
 				</li>
 				<li>			
 					<div class="article_carousel">
-						<a href="" class="news-link"><img src="images/dems.jpg" alt="Alt text" title="title text" />
+						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/dems.jpg" alt="Alt text" title="title text" />
 						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
 					</div>
 				</li>
@@ -49,7 +49,7 @@
 	</div>
 	<div id="article-synopsis">
 		<div id="synopsis-logo">
-			<img class="article-source" src="images/logo-AP.gif" alt="AP" title="AP" />
+			<img class="article-source" src="{% if source.img != None %} {{ source.img }} {% else %}{{ STATIC_URL }}images/logo-AP.gif{% endif %}" alt="AP" title="AP" />
 		</div>
 		<div id="synopsis-header">			
 			<ul id="synopsis_banner" class="h_nav">
@@ -63,16 +63,7 @@
 			</ul>
 		</div>
 		<div id="synopsis">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat sem at nibh faucibus ac interdum ipsum rhoncus. Ut scelerisque, augue sed facilisis iaculis, nunc sapien mattis libero, ac tempor metus nisi sed arcu. Donec luctus, ligula ut blandit rhoncus, ante leo vehicula lorem, in consequat quam massa pellentesque mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ac diam sit amet arcu luctus interdum vel sit amet mauris. In hac habitasse platea dictumst. Ut laoreet tortor sit amet est pharetra tincidunt. Fusce sagittis orci at urna semper cursus. Nunc ut nunc purus. Mauris pellentesque mollis sodales. In vitae tellus quis libero vehicula lacinia a eget erat. Ut hendrerit augue non velit blandit consequat.</p>
-	 
-			<p>Pellentesque blandit tortor volutpat risus convallis suscipit. Curabitur commodo vulputate euismod. Duis ut vehicula arcu. Fusce vestibulum, odio eget accumsan ultricies, nulla leo venenatis sem, vel bibendum risus ante non sapien. Ut dapibus fermentum erat, placerat ornare libero laoreet at. Nam laoreet, eros et tristique mattis, nulla elit dictum nibh, vel pretium tellus urna eu ligula. Maecenas suscipit, justo id pellentesque tincidunt, nisi massa bibendum erat, non congue ipsum lectus in velit. Sed in justo purus, et tempus nulla.</p>
-			 
-			<p>Quisque sit amet dapibus tellus. Ut quis dolor nec felis tempor viverra. Pellentesque mollis, velit id placerat mattis, magna lacus blandit neque, vel viverra lorem nisi sed nisi. Aliquam consectetur odio non odio elementum interdum. Curabitur ipsum nulla, tempor sollicitudin blandit feugiat, luctus sed diam. Fusce eleifend magna sed quam convallis consectetur. Curabitur aliquet risus fermentum massa adipiscing et mattis nunc bibendum. Curabitur adipiscing volutpat ultrices. Nunc venenatis suscipit ligula non porta.</p>
-			
-			<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam. Ut vel neque a lorem pharetra dapibus eu vel quam. In sit amet nisi pulvinar purus ullamcorper fermentum. Phasellus eget velit quis velit ullamcorper commodo vitae volutpat erat. In hac habitasse platea dictumst. Suspendisse potenti. Duis mi lectus, condimentum eu faucibus in, hendrerit ut lacus. Maecenas sollicitudin pretium sapien ut congue.</p>
- 
-			<p>Sed tempor vestibulum velit in porta. Suspendisse imperdiet consequat nulla vel tempor. Etiam consequat laoreet diam vel pharetra. Aliquam vitae aliquam velit. Nulla at dui non orci pellentesque ultrices vel ut eros. Nam cursus ante vel nunc gravida gravida. Integer sed feugiat enim. Aliquam molestie massa vitae ipsum vestibulum nec posuere ligula blandit. Ut at quam id leo dictum elementum. Etiam neque sapien, congue volutpat convallis eget, aliquet in lorem. Integer volutpat nisl molestie libero scelerisque tempus. Quisque interdum congue nulla, et malesuada eros pellentesque id. Nulla viverra enim ornare leo elementum sed egestas urna pellentesque.</p>
- 
+			{{ story.content|safe }}
 			</div>
 		<div id="synopsis-comments">
 			<div id="comments-header">

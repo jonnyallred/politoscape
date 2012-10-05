@@ -2,7 +2,7 @@
 {% for story in stories %}
 <div id="art_1_1" class="news_article_scroll row1">
 	<div class="article_tile">
-		<a href="#article-display" class="news-link" id="id-art_1_1"><img src="{{ STATIC_URL ]]images/clint.JPG" alt="Alt text" title="title text" />
+		<a href="#article-display" class="news-link" id="art_{{ story.id }}"><img src="{{ STATIC_URL }}images/clint.JPG" alt="Alt text" title="title text" />
 		<div class="article_title_title">{{ story.title }}</div></a>
 	</div>
 </div> 
