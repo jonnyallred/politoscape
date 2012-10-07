@@ -7,7 +7,7 @@ admin.autodiscover()
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^spectrum/', include('politoscape.spectrum.urls')),
+    (r'^spectrum/', include('spectrum.urls')),
     (r'^(?P<page_name>about|act|contact|stats|team)/$', 'spectrum.views.static_page'),
     # Example:
     # (r'^politoscape/', include('politoscape.foo.urls')),
