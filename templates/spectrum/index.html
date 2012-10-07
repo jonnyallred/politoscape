@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Politoscape</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+
+<link href="{{ STATIC_URL }}css/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+<script src="{{ STATIC_URL }}js/jquery-latest.js"></script>
+<script src="{{ STATIC_URL }}js/jquery-ui-.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="{{ STATIC_URL }}js/main.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.tinyscrollbar.js"></script>
+<link href="{{ STATIC_URL }}css/tinyscrollbar.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.simplyscroll.min.js"></script>
+<link rel="stylesheet" href="{{ STATIC_URL }}css/jquery.simplyscroll.css" media="all" type="text/css">
+
+<script type="text/javascript" src="{{ STATIC_URL }}libraries/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" href="{{ STATIC_URL }}libraries/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.watermark.min.js"></script>
+
+<link href="{{ STATIC_URL }}css/main.css" rel="stylesheet" type="text/css" />
+
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		initIndexpage();
+	})	
+</script>
+</head>
+<body>
+	<div id="banner_band">
+		<div id="banner" class="grid_full">
+			<a href="/spectrum/"><img src="{{ STATIC_URL }}images/logo.gif" height="55" width="269" alt="Politoscape logo" title="Politoscape logo" border="0" /></a>
+			<ul id="ul_banner_actions" class="h_nav">									
+				<li class="loggedin">
+					Welcome,<br />
+					Username
+				</li>					
+				<li><a href="" id="li-refresh">Refresh</a></li>					
+				<li><a href="#search-box" id="li-search">Search</a></li>						
+				<li class="/News/">News</li>
+				<li><a href="/stats/" id="li-stats">Stats</a></li>
+				<li class="last"><a href="/act/" id="li-act">Act</a></li>
+			</ul>
+			<div id="search-box" class="hidden">
+				<form id="frmSearch" name="" action="" method="post">
+					<input type="text" name="search" value="" />
+					<input id="submit_btn" type="submit" name="submit" value="search" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="main_channel">
+		<div id="contentbody" class="grid_fullwsscroll fullscale">
+			<div class="clear"></div>
+		</div>
+	</div>	
+	<div id="footer_band">			
+		<div id="news_footer">			
+			<div id="slider-wrapper">
+				<div id="slider"></div>
+			</div>	
+			<ul id="news_ul_footer" class="h_nav">
+				<li><a href="" class="election">2012 ELECTION</a></li>
+				<li><a href="" class="headlines">HEADLINES</a></li>
+				<li class="last"><a href="" class="economics">ECONOMICS</a></li>
+			</ul>
+			<div id="copy_article_footer">
+				<div class="copytext">
+					<img src="{{ STATIC_URL }}images/polito.gif" alt="Copyright 2012 Politoscape" height="28" width="65" border="0">
+					<p>Politoscape &copy; 2012</p>
+				</div>
+				<ul id="ul_site-copy" class="h_nav">
+					<li><a href="/about/">ABOUT</a></li>
+					<li><a href="/team/">TEAM</a></li>
+					<li><a href="/contact/">CONTACT</a></li>
+				</ul>
+			</div>		
+		</div>		
+	</div>
+	<div class="hidden">
+		<div id="article-display"></div>
+		<div id="search-display"></div>
+	</div>
+	
+	<div id="facebook-login" class="hidden">
+		<div class="facebook-close"><a href="" class="btn-close">Close</a></div>	
+		<p class="top">To continue commenting, please login or register through Facebook or email</p>
+		<div id="signin">		
+			<div id="fb-login-button"></div>
+			<div class="para">or</div>
+			
+			<form id="frm_signin" name="frm_signin" method="post" action="">
+				<div class="frm-social"><input type="text" name="email" value="" class="email" /></div>
+				<div class="frm-social"><input type="password" name="password" value="" class="password" /></div>
+				<div class="frm-social"><input type="button" name="site-login" id="site-login" value="" /></div>
+			</form>
+		</div>
+		<div id="register">	
+			<div id="fb-register-button"></div>
+			<div class="para">or</div>
+			<form id="frm_signup" name="frm_signin" method="post" action="">
+				<div class="frm-social"><input type="text" name="firstname" value="" class="firstname" title="first name" /></div>
+				<div class="frm-social"><input type="text" name="lastname" value="" class="lastname" title="last name" /></div>
+				<div class="frm-social"><input type="text" name="email" value="" class="email" title="email address" /></div>
+				<div class="frm-social"><input type="button" name="site-register" id="site-register" value="" /></div>
+			</form>
+		
+		</div>
+	</div>
+	
+	<div id="search-article-display" class="hidden">
+		<div id="search-article-header">
+			<a href="" class="article-btn-close">Close</a>	
+			<div id="article-credit">w York Times - September 5, 2012
+			</div>
+		</div>
+		<div class="search-article-scroll">
+			<h1>This is our search article</h1>	
+			<img src="{{ STATIC_URL }}images/gop.jpg" alt="" title="" align="right" />
+			<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam. Ut velque a lorem pharetra dapibus eu vel quam. In sit amet nisi pulvinar purus ullamcorper fermentum. Phasellus eget velit quis velit ullamcorper commodo vitae volutpat erat.</p>
+			<p>In hac habitasse platea dictumst. Suspendisse potenti. Duis mi lectus, condimentum eu faucibus in, hendrerit ut lacus. Maecenas sollicitudin pretium sapien ut congue.</p>
+			<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam. Ut velque a lorem pharetra dapibus eu vel quam. In sit amet nisi pulvinar purus ullamcorper fermentum. Phasellus eget velit quis velit ullamcorper commodo vitae volutpat erat.</p>
+			<p>In hac habitasse platea dictumst. Suspendisse potenti. Duis mi lectus, condimentum eu faucibus in, hendrerit ut lacus. Maecenas sollicitudin pretium sapien ut congue.</p>
+			<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam. Ut velque a lorem pharetra dapibus eu vel quam. In sit amet nisi pulvinar purus ullamcorper fermentum. Phasellus eget velit quis velit ullamcorper commodo vitae volutpat erat.</p>
+			<p>In hac habitasse platea dictumst. Suspendisse potenti. Duis mi lectus, condimentum eu faucibus in, hendrerit ut lacus. Maecenas sollicitudin pretium sapien ut congue.</p>
+		</div>	
+	</div>
+
+	<div id="modalCommentOverlay"></div>
+	<div id="modalOverlay"></div>	
+	<div id="loadingDiv"></div>
+</body>
+</html>
