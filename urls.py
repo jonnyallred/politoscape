@@ -8,6 +8,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^spectrum/', include('politoscape.spectrum.urls')),
+    (r'^(?P<page_name>about|act|contact|stats|team)/$', 'spectrum.views.static_page'),
     # Example:
     # (r'^politoscape/', include('politoscape.foo.urls')),
 
@@ -16,4 +17,5 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
+
 )
