@@ -1,0 +1,167 @@
+<div id="article-preview">
+	<div class="preview-close"><a href="" class="btn-close">Close</a></div>	
+	<div id="article-views">
+		<div id="preview-feature">
+			<a href="{{ story.url }}" class="news-link"><img src="{{ STATIC_URL }}images/clint.JPG" alt="Alt text" title="title text" />
+			<div class="preview-feature-title"><p>{{ story.title }}</p><p>{{ source.name }}</p></div></a>
+		</div>
+		<div id="preview-other-carousel">
+			<div id="other-side"></div>				
+			<ul id="carousel-slider"  class="h_nav">
+			  	<li>				
+					<div class="article_carousel">
+						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/gop.jpg" alt="Alt text" title="title text" />
+						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
+					</div>	
+				</li>
+				<li>		
+					<div class="article_carousel">
+						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/dems.jpg" alt="Alt text" title="title text" />
+						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
+					</div>
+				</li>
+				<li>	
+					<div class="article_carousel">
+						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/gop.jpg" alt="Alt text" title="title text" />
+						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
+					</div>		
+				</li>
+				<li>		
+					<div class="article_carousel">
+						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/dems.jpg" alt="Alt text" title="title text" />
+						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
+					</div>
+				</li>
+				<li>	
+					<div class="article_carousel">
+						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/gop.jpg" alt="Alt text" title="title text" />
+						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
+					</div>	
+				</li>
+				<li>			
+					<div class="article_carousel">
+						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/dems.jpg" alt="Alt text" title="title text" />
+						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
+					</div>
+				</li>
+			</ul>	
+		</div>
+	</div>
+	<div id="article-synopsis">
+		<div id="synopsis-logo">
+			<img class="article-source" src="{% if source.img != None %} {{ source.img }} {% else %}{{ STATIC_URL }}images/logo-AP.gif{% endif %}" alt="AP" title="AP" />
+		</div>
+		<div id="synopsis-header">			
+			<ul id="synopsis_banner" class="h_nav">
+				<li><a href="" id="like" title="Like"></a></li>
+				<li><a href="" id="retweet" title="Retweet"></a></li>
+				<li><a href="" id="favorite" title="Favorite"></a></li>
+			</ul>	
+			<ul id="article-tools" class="h_nav">
+				<li><a href="" id="decreaseFont" title="Decrease font"></a></li>
+				<li><a href="" id="increaseFont" title="Increase font"></a></li>
+			</ul>
+		</div>
+		<div id="synopsis">
+			{{ story.content|safe }}
+			</div>
+		<div id="synopsis-comments">
+			<div id="comments-header">
+				<a href="" id="close-comment" class="hidden"></a>
+				Comments
+			</div>
+			<div id="comments-input">
+				<form id="frmComment" name="" action="" method="post">
+					<input type="text" name="comment" value="" />
+					<input id="comment_btn" type="submit" name="submit" value="comment" />
+				</form>				
+			</div>
+			<div class="comment-scroll">
+				<div class="comment-pane">
+					<div class="commenter">
+						<img src="images/commenter.jpg" width="92" height="80" alt="" title="" />
+					</div>
+					<div class="comment">
+						<p class="commenter-id">Joe said:</p>
+						<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam</p>
+						<div class="comment-time">
+							Posted on September 5th, 20120 at 5:20 P.M.
+						</div>
+					</div>
+				</div>
+				<div class="comment-pane">
+					<div class="commenter">
+						<img src="images/commenter.jpg" width="92" height="80" alt="" title="" />
+					</div>
+					<div class="comment">
+						<p class="commenter-id">Joe said:</p>
+						<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam</p>
+						<div class="comment-time">
+							Posted on September 5th, 20120 at 5:20 P.M.
+						</div>
+					</div>
+				</div>
+				<div class="comment-pane">
+					<div class="commenter">
+						<img src="images/commenter.jpg" width="92" height="80" alt="" title="" />
+					</div>
+					<div class="comment">
+						<p class="commenter-id">Joe said:</p>
+						<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam</p>
+						<div class="comment-time">
+							Posted on September 5th, 20120 at 5:20 P.M.
+						</div>
+					</div>
+				</div>
+				<div class="comment-pane">
+					<div class="commenter">
+						<img src="images/commenter.jpg" width="92" height="80" alt="" title="" />
+					</div>
+					<div class="comment">
+						<p class="commenter-id">Joe said:</p>
+						<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam</p>
+						<div class="comment-time">
+							Posted on September 5th, 20120 at 5:20 P.M.
+						</div>
+					</div>
+				</div>
+				<div class="comment-pane">
+					<div class="commenter">
+						<img src="images/commenter.jpg" width="92" height="80" alt="" title="" />
+					</div>
+					<div class="comment">
+						<p class="commenter-id">Joe said:</p>
+						<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam</p>
+						<div class="comment-time">
+							Posted on September 5th, 20120 at 5:20 P.M.
+						</div>
+					</div>
+				</div>
+				<div class="comment-pane">
+					<div class="commenter">
+						<img src="images/commenter.jpg" width="92" height="80" alt="" title="" />
+					</div>
+					<div class="comment">
+						<p class="commenter-id">Joe said:</p>
+						<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam</p>
+						<div class="comment-time">
+							Posted on September 5th, 20120 at 5:20 P.M.
+						</div>
+					</div>
+				</div>
+				<div class="comment-pane">
+					<div class="commenter">
+						<img src="images/commenter.jpg" width="92" height="80" alt="" title="" />
+					</div>
+					<div class="comment">
+						<p class="commenter-id">Joe said:</p>
+						<p>Nulla tortor mauris, ultricies a eleifend eget, lobortis et diam</p>
+						<div class="comment-time">
+							Posted on September 5th, 20120 at 5:20 P.M.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

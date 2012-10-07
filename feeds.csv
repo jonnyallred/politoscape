@@ -1,29 +1,29 @@
-http://feeds.dailykos.com/dailykos/index.xml,http://www.dailykos.com/,Daily Kos,-3,Blog
-http://feeds.feedburner.com/Americablog,http://www.americablog.com/,AMERICAblog,-2,Blog
-http://feeds.washingtonpost.com/rss/rss_ezra-klein,http://www.washingtonpost.com/blogs/ezra-klein,WonkBlog,-1,MSM
-http://feeds.feedburner.com/firedoglake/fdl,http://firedoglake.com/,firedoglake,-3,blog
-http://krugman.blogs.nytimes.com/feed/,http://krugman.blogs.nytimes.com/,The Conscience of a Liberal,-3,MSM
-http://www.huffingtonpost.com/feeds/verticals/politics/index.xml,http://www.huffingtonpost.com/,The Huffington Post,-2,blog
-http://feeds.mediamatters.org/mediamatters/latest,http://mediamatters.org/,Media Matters for America,-3,blog
-http://motherjones.com/kevin-drum/feed,http://motherjones.com/kevin-drum,Kevin Drum,-1,blog
-http://feeds.wonkette.com/wonkette/feed,http://www.wonkette.com/,Wonkette,-4,blog
-http://feeds.feedburner.com/crooksandliars/YaCP,http://crooksandliars.com/,Crooks and Liars,-4,blog
-http://talkingpointsmemo.com/rssfeeds.php,http://talkingpointsmemo.com/,Talking Points Memo,-2,blog
-http://feeds.feedburner.com/OliverWillisLikeKryptoniteToStupid,http://www.oliverwillis.com/,Oliver Willis,-4,blog
-http://feeds.feedburner.com/NewsHounds,http://www.newshounds.us/,News Hounds,-4,blog
-http://feeds.feedburner.com/PoliticalWire,http://politicalwire.com/,Political Wire,0,blog
-http://www.politifact.com/feeds/articles/truth-o-meter/,http://www.politifact.com/,PolitiFact,0,blog
-http://feeds.abcnews.com/politicsblog,http://abcnews.go.com/blogs/politics/the-note/,ABC Politics,0,MSM
-http://feeds.powerlineblog.com/powerlineblog/livefeed,http://www.powerlineblog.com/,Powerline,2,blog
-http://www.weeklystandard.com/weblogs/TWSFP/atom.xml,http://www.weeklystandard.com/daily/daily.asp,The Weekly Standard,3,blog
-http://feeds.feedburner.com/hotair/main,http://hotair.com/,Hot Air,3,blog
-http://www.nationalreview.com/corner/feed,http://www.nationalreview.com/corner,The Corner,4,blog
-http://feeds.feedburner.com/DrudgeReportFeed,http://drudgereport.com/,The Drudge Report,3,aggregator
-http://online.wsj.com/xml/rss/3_7087.xml,http://online.wsj.com/public/page/news-opinion-commentary.html,Wall Street Journal Opinion,1,MSM
-http://feeds.foxnews.com/foxnews/politics,http://www.foxnews.com/politics/index.html,Fox News Politics,3,MSM
-http://feeds.feedburner.com/LegalInsurrection,http://legalinsurrection.com/,Legal Insurrection,1,blog
-http://volokh.com/,http://volokh.com/,The Volokh Conspiracy,1,blog
-http://feeds.feedburner.com/instapundit/main,http://pjmedia.com/instapundit/,Instapundit,2,blog
-http://feeds.feedburner.com/redstate,http://www.redstate.com/,RedState,3,blog
-http://feeds.feedburner.com/BigJournalism,http://bigjournalism.com/,Big Journalism,2,blog
-http://www.riehlworldview.com/carnivorous_conservative/atom.xml,http://www.riehlworldview.com/,Riehl Worldview,4,blog
+http://feeds.dailykos.com/dailykos/index.xml,http://www.dailykos.com/,Daily Kos,-3,Blog,Some
+http://feeds.feedburner.com/Americablog,http://www.americablog.com/,AMERICAblog,-2,Blog,Ads
+http://feeds.washingtonpost.com/rss/rss_ezra-klein,http://www.washingtonpost.com/blogs/ezra-klein,WonkBlog,-1,MSM,Some
+http://feeds.feedburner.com/firedoglake/fdl,http://firedoglake.com/,firedoglake,-3,blog,None
+http://krugman.blogs.nytimes.com/feed/,http://krugman.blogs.nytimes.com/,The Conscience of a Liberal,-3,MSM,None
+http://www.huffingtonpost.com/feeds/verticals/politics/index.xml,http://www.huffingtonpost.com/,The Huffington Post,-2,blog,None
+http://feeds.mediamatters.org/mediamatters/latest,http://mediamatters.org/,Media Matters for America,-3,blog,Graphs
+http://motherjones.com/kevin-drum/feed,http://motherjones.com/kevin-drum,Kevin Drum,-1,blog,Some
+http://feeds.wonkette.com/wonkette/feed,http://www.wonkette.com/,Wonkette,-4,blog,Ads
+http://feeds.feedburner.com/crooksandliars/YaCP,http://crooksandliars.com/,Crooks and Liars,-4,blog,Some
+http://talkingpointsmemo.com/rssfeeds.php,http://talkingpointsmemo.com/,Talking Points Memo,-2,blog,Yes
+http://feeds.feedburner.com/OliverWillisLikeKryptoniteToStupid,http://www.oliverwillis.com/,Oliver Willis,-4,blog,Yes
+http://feeds.feedburner.com/NewsHounds,http://www.newshounds.us/,News Hounds,-4,blog,None
+http://feeds.feedburner.com/PoliticalWire,http://politicalwire.com/,Political Wire,0,blog,None
+http://www.politifact.com/feeds/articles/truth-o-meter/,http://www.politifact.com/,PolitiFact,0,blog,None
+http://feeds.abcnews.com/politicsblog,http://abcnews.go.com/blogs/politics/the-note/,ABC Politics,0,MSM,None
+http://feeds.powerlineblog.com/powerlineblog/livefeed,http://www.powerlineblog.com/,Powerline,2,blog,None
+http://www.weeklystandard.com/weblogs/TWSFP/atom.xml,http://www.weeklystandard.com/daily/daily.asp,The Weekly Standard,3,blog,None
+http://feeds.feedburner.com/hotair/main,http://hotair.com/,Hot Air,3,blog,None
+http://www.nationalreview.com/corner/feed,http://www.nationalreview.com/corner,The Corner,4,blog,None
+http://feeds.feedburner.com/DrudgeReportFeed,http://drudgereport.com/,The Drudge Report,3,aggregator,Ads
+http://online.wsj.com/xml/rss/3_7087.xml,http://online.wsj.com/public/page/news-opinion-commentary.html,Wall Street Journal Opinion,1,MSM,Small
+http://feeds.foxnews.com/foxnews/politics,http://www.foxnews.com/politics/index.html,Fox News Politics,3,MSM,None
+http://feeds.feedburner.com/LegalInsurrection,http://legalinsurrection.com/,Legal Insurrection,1,blog,None
+http://volokh.com/,http://volokh.com/,The Volokh Conspiracy,1,blog,None
+http://feeds.feedburner.com/instapundit/main,http://pjmedia.com/instapundit/,Instapundit,2,blog,None
+http://feeds.feedburner.com/redstate,http://www.redstate.com/,RedState,3,blog,None
+http://feeds.feedburner.com/BigJournalism,http://bigjournalism.com/,Big Journalism,2,blog,Some
+http://www.riehlworldview.com/carnivorous_conservative/atom.xml,http://www.riehlworldview.com/,Riehl Worldview,4,blog,None

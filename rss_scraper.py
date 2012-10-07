@@ -14,7 +14,7 @@ from time import strftime
 import settings
 import csv
  
-import feedparser     # available at http://feedparser.org
+import feedparser     # available at http://code.google.com/p/feedparser/
  
  
 THREAD_LIMIT = 20
@@ -35,32 +35,32 @@ c = conn.cursor()
 #             ('http://feeds.wsjonline.com/wsj/xml/rss/3_7011.xml', 'wsj', -1),
 #             )
 
-#with open(feeds_file, 'rb') as f:
-#    reader = csv.reader(f)
-#    for info in reader:
-#        c.execute("INSERT INTO rss_feed(url, name, score) VALUES('%s', '%s', %d);" % (info[0],info[2],int(info[3]))) #url, name, score
+with open(feeds_file, 'rb') as f:
+    reader = csv.reader(f)
+    for info in reader:
+        c.execute("INSERT INTO spectrum_source(url, name, viewpoint) VALUES('%s', '%s', %d);" % (info[0],info[2],int(info[3]))) #url, name, score
         
-feeds = c.execute('SELECT id, url, score FROM rss_feed').fetchall()
+feeds = c.execute('SELECT id, url, viewpoint FROM spectrum_source').fetchall()
  
 def store_entries(id, items, score=0):
     """ Takes a feed_id and a list of items and stores them in the DB """
     for entry in items:
-        c.execute('SELECT id from rss_entry WHERE url=?', (entry.link,))
+        c.execute('SELECT id from spectrum_source WHERE url=?', (entry.link,))
         if len(c.fetchall()) == 0:
-            c.execute('INSERT INTO rss_entry (feed_id, url, title, content, date, score) \
-                       VALUES (?,?,?,?,?,?)', 
+            c.execute('INSERT INTO spectrum_story (source_id, url, title, content, date, viewpoint, quality) \
+                       VALUES (?,?,?,?,?,?,?)', 
                        (id, entry.link, entry.title, entry.summary, 
-                        strftime("%Y-%m-%d %H:%M:%S",entry.updated_parsed), score))
+                        strftime("%Y-%m-%d %H:%M:%S",entry.updated_parsed), score, 0))
  
 def retrieve_and_queue_entries():
     """ Get rss entries and queue them for processing """
     while True:
         try:
-            id, feed_url, score = feeds_to_retrieve.get(False) # False = Don't wait
+            id, source_url, score = feeds_to_retrieve.get(False) # False = Don't wait
         except Queue.Empty:
             return
  
-        entries = feedparser.parse(feed_url).entries
+        entries = feedparser.parse(source_url).entries
         
         entries_to_process.put((id, entries, score), True) # This will block if full
  
@@ -68,7 +68,7 @@ def retrieve_and_queue_entries():
 #main method 
 for info in feeds: 
     # Queue up the feeds
-    feeds_to_retrieve.put([info['id'], info['url'], info['score']])
+    feeds_to_retrieve.put([info['id'], info['url'], info['viewpoint']])
  
 for n in xrange(THREAD_LIMIT):
     # initialize threads
