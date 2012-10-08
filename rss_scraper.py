@@ -13,21 +13,55 @@ import Queue
 from time import strftime
 import settings
 import csv
+import imgscrape
  
 import feedparser     # available at http://code.google.com/p/feedparser/
  
+def store_entries(id, items, score=0):
+    """ Takes a feed_id and a list of items and stores them in the DB """
+    for entry in items:
+        try:
+            imgurl = imgscrape.largestImage(entry.link)
+        except Exception, e:
+            print e
+            imgurl = ""
+        db_cursor.execute('INSERT INTO spectrum_story \
+                           (source_id, url, title, content, date, viewpoint, \
+                            quality, img) \
+                           VALUES (?,?,?,?,?,?,?,?)', 
+                          (id, entry.link, entry.title, entry.summary, 
+                           strftime("%Y-%m-%d %H:%M:%S",entry.updated_parsed), 
+                           score, 0, imgurl))
  
-THREAD_LIMIT = 20
-feeds_to_retrieve = Queue.Queue(0)
-entries_to_process = Queue.Queue(THREAD_LIMIT)
- 
+def retrieve_and_queue_entries():
+    """ Get rss entries and queue them for processing """
+    while True:
+        try:
+            id, url, viewpoint = feeds_to_retrieve.get(False) # False = Don't wait
+        except Queue.Empty:
+            return
+        entries = feedparser.parse(url).entries
+        entries_to_process.put((id, entries, viewpoint), True) # This will block if full
+        
+def grab_and_queue_feeds():
+    feeds_to_retrieve = Queue.Queue(0)
+    # Get the feeds from the DB
+    feeds = db_cursor.execute('SELECT id, url, viewpoint FROM spectrum_source').fetchall()
+    # Queue up the feeds 
+    for feed in feeds: 
+        feeds_to_retrieve.put([feed['id'], feed['url'], feed['viewpoint']])    
+    return feeds_to_retrieve
+
+###############
+# MAIN METHOD #
+###############
+
+# Pull database settings from settings
 DATABASE = settings.DATABASES['default']['NAME']
-feeds_file = "feeds.csv" 
- 
-#connect to the sqlite db
-conn = sqlite3.connect(DATABASE)
-conn.row_factory = sqlite3.Row
-c = conn.cursor()
+# Connect to the sqlite db
+db_connection = sqlite3.connect(DATABASE)
+db_connection.row_factory = sqlite3.Row
+db_cursor = db_connection.cursor()
  
 #insert initial values into feed database
 #rss_feeds = (('http://feeds.gawker.com/lifehacker/vip', 'lifehacker', 0),
@@ -35,53 +69,32 @@ c = conn.cursor()
 #             ('http://feeds.wsjonline.com/wsj/xml/rss/3_7011.xml', 'wsj', -1),
 #             )
 
+feeds_file = "feeds.csv" 
+ 
 with open(feeds_file, 'rb') as f:
     reader = csv.reader(f)
     for info in reader:
-        c.execute("INSERT INTO spectrum_source(url, name, viewpoint) VALUES('%s', '%s', %d);" % (info[0],info[2],int(info[3]))) #url, name, score
-        
-feeds = c.execute('SELECT id, url, viewpoint FROM spectrum_source').fetchall()
- 
-def store_entries(id, items, score=0):
-    """ Takes a feed_id and a list of items and stores them in the DB """
-    for entry in items:
-        c.execute('SELECT id from spectrum_source WHERE url=?', (entry.link,))
-        if len(c.fetchall()) == 0:
-            c.execute('INSERT INTO spectrum_story (source_id, url, title, content, date, viewpoint, quality) \
-                       VALUES (?,?,?,?,?,?,?)', 
-                       (id, entry.link, entry.title, entry.summary, 
-                        strftime("%Y-%m-%d %H:%M:%S",entry.updated_parsed), score, 0))
- 
-def retrieve_and_queue_entries():
-    """ Get rss entries and queue them for processing """
-    while True:
-        try:
-            id, source_url, score = feeds_to_retrieve.get(False) # False = Don't wait
-        except Queue.Empty:
-            return
- 
-        entries = feedparser.parse(source_url).entries
-        
-        entries_to_process.put((id, entries, score), True) # This will block if full
- 
- 
-#main method 
-for info in feeds: 
-    # Queue up the feeds
-    feeds_to_retrieve.put([info['id'], info['url'], info['viewpoint']])
- 
+        db_cursor.execute("INSERT INTO spectrum_source(url, name, viewpoint) \
+                           VALUES('%s', '%s', %d);" % 
+                           (info[0],info[2],int(info[3]))) #url, name, viewpoint
+
+THREAD_LIMIT = 20
+entries_to_process = Queue.Queue(THREAD_LIMIT)
+feeds_to_retrieve = grab_and_queue_feeds()
+
+# Initialize Threads 
 for n in xrange(THREAD_LIMIT):
-    # initialize threads
     t = threading.Thread(target=retrieve_and_queue_entries)
     t.start()
- 
+
+# While threads are running or RSS entries are left in the queue...
 while threading.activeCount() > 1 or not entries_to_process.empty():
-    # While threads are running or RSS entries are left in the queue...
+    #check to see if the feed processor has finished pulling any entries. If so, process them.
     try:
-        id, entries, score = entries_to_process.get(False, 1) # Wait for up to a second
+        id, entries, viewpoint = entries_to_process.get(False, 1) # Wait for up to a second
     except Queue.Empty:
         continue
+    
+    store_entries(id, entries, viewpoint)
  
-    store_entries(id, entries, score)
- 
-conn.commit()
+db_connection.commit()
