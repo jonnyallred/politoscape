@@ -6,7 +6,6 @@ import logging
 DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 MEDIA_ROOT = os.path.join(SITE_ROOT, 'static')
-STATIC_URL = '/static/'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -54,12 +53,12 @@ USE_L10N = True
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/static'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+ADMIN_MEDIA_PREFIX = 'admin-media'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '@-=j(^df85w28l5+%6emwuxp276=zr4v5@gn58-fy6dq12h^50'
@@ -107,7 +106,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
-    'django.contrib.staticfiles',
     'spectrum'
 )
 
