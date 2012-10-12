@@ -3,7 +3,7 @@
 <div id="art_1_1" class="news_article_scroll row1">
 	<div class="article_tile">
 		<a href="#article-display" class="news-link" id="art_{{ story.id }}">
-			<img src="{% if story.img != None %} {{ story.img }} {% else %}{{ STATIC_URL }}images/clint.JPG{% endif %}" alt="Alt text" title="title text" />
+			<img src="{% if story.img != '' %}{{ story.img }}{% else %}{% if story.source.img != '' %}{{ STATIC_URL }}large_images/{{ story.source.img}}{% else %}{{ STATIC_URL }}images/clint.JPG{% endif %}{% endif %}" alt="Alt text" title="title text" />
 		<div class="article_title_title">{{ story.title }}</div></a>
 	</div>
 </div> 
@@ -17,4 +17,4 @@
 </div>
  -->
 
-</div>
+</div

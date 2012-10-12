@@ -1,0 +1,39 @@
+ Volume in drive C is OSDisk
+ Volume Serial Number is 6CEA-5828
+
+ Directory of C:\Users\allrj\git\politoscape\spectrum\static\logo
+
+10/11/2012  12:12 AM    <DIR>          .
+10/11/2012  12:12 AM    <DIR>          ..
+10/11/2012  12:09 AM             3,980 abc.jpeg
+10/11/2012  12:09 AM            10,236 americablog.png
+10/11/2012  12:09 AM             3,322 big-journalism.png
+10/11/2012  12:09 AM             3,832 crooks-and-liars.jpeg
+10/11/2012  12:09 AM             7,932 daily-kos.png
+10/11/2012  12:09 AM             4,989 drudge-report.jpeg
+10/11/2012  12:09 AM             3,971 Firedoglake.jpeg
+10/11/2012  12:09 AM             4,368 fox-news.jpeg
+10/11/2012  12:09 AM             3,784 hot-air.png
+10/11/2012  12:09 AM             3,877 huffington-post.png
+10/11/2012  12:09 AM             3,234 Instapundit.png
+10/11/2012  12:09 AM             3,558 legal-insurrection.png
+10/11/2012  12:12 AM                 0 logos.txt
+10/11/2012  12:09 AM             5,169 media-matters.png
+10/11/2012  12:09 AM            12,453 mother-jones-kevin-drum.png
+10/11/2012  12:09 AM            12,928 national-review-corner.jpeg
+10/11/2012  12:09 AM             5,931 newshounds.png
+10/11/2012  12:09 AM             8,939 oliverwillis.jpeg
+10/11/2012  12:09 AM            13,344 political-wire.png
+10/11/2012  12:09 AM             5,397 politifact.jpeg
+10/11/2012  12:09 AM            11,977 powerline.png
+10/11/2012  12:09 AM             8,425 red-state.jpeg
+10/11/2012  12:09 AM            13,384 riehl-worldview.png
+10/11/2012  12:09 AM             3,573 talkingpointsmemo.jpeg
+10/11/2012  12:09 AM             6,161 the-conscience-liberal.png
+10/11/2012  12:09 AM             5,048 the-weekly-standard.gif
+10/11/2012  12:09 AM            21,758 volokh.png
+10/11/2012  12:09 AM             5,899 wonkblog.jpeg
+10/11/2012  12:09 AM             5,113 WonketteLogo.png
+10/11/2012  12:09 AM             4,125 wsj.gif
+              30 File(s)        206,707 bytes
+               2 Dir(s)   2,572,935,168 bytes free

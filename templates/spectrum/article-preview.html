@@ -49,7 +49,7 @@
 	</div>
 	<div id="article-synopsis">
 		<div id="synopsis-logo">
-			<img class="article-source" src="{% if source.img != None %} {{ source.img }} {% else %}{{ STATIC_URL }}images/logo-AP.gif{% endif %}" alt="AP" title="AP" />
+			<img class="article-source" src="{% if source.logo != '' %}{{ STATIC_URL }}logo/{{ source.logo }}{% else %}{{ STATIC_URL }}images/logo-AP.gif{% endif %}" alt="AP" title="AP" />
 		</div>
 		<div id="synopsis-header">			
 			<ul id="synopsis_banner" class="h_nav">
