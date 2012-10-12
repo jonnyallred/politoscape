@@ -2,7 +2,7 @@
 	<div class="preview-close"><a href="" class="btn-close">Close</a></div>	
 	<div id="article-views">
 		<div id="preview-feature">
-			<a href="{{ story.url }}" class="news-link"><img src="{{ STATIC_URL }}images/clint.JPG" alt="Alt text" title="title text" />
+			<a href="{{ story.url }}" class="news-link"><img src="/static/images/clint.JPG" alt="Alt text" title="title text" />
 			<div class="preview-feature-title"><p>{{ story.title }}</p><p>{{ source.name }}</p></div></a>
 		</div>
 		<div id="preview-other-carousel">
@@ -10,37 +10,37 @@
 			<ul id="carousel-slider"  class="h_nav">
 			  	<li>				
 					<div class="article_carousel">
-						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/gop.jpg" alt="Alt text" title="title text" />
+						<a href="" class="news-link"><img src="/static/images/gop.jpg" alt="Alt text" title="title text" />
 						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
 					</div>	
 				</li>
 				<li>		
 					<div class="article_carousel">
-						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/dems.jpg" alt="Alt text" title="title text" />
+						<a href="" class="news-link"><img src="/static/images/dems.jpg" alt="Alt text" title="title text" />
 						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
 					</div>
 				</li>
 				<li>	
 					<div class="article_carousel">
-						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/gop.jpg" alt="Alt text" title="title text" />
+						<a href="" class="news-link"><img src="/static/images/gop.jpg" alt="Alt text" title="title text" />
 						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
 					</div>		
 				</li>
 				<li>		
 					<div class="article_carousel">
-						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/dems.jpg" alt="Alt text" title="title text" />
+						<a href="" class="news-link"><img src="/static/images/dems.jpg" alt="Alt text" title="title text" />
 						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
 					</div>
 				</li>
 				<li>	
 					<div class="article_carousel">
-						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/gop.jpg" alt="Alt text" title="title text" />
+						<a href="" class="news-link"><img src="/static/images/gop.jpg" alt="Alt text" title="title text" />
 						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
 					</div>	
 				</li>
 				<li>			
 					<div class="article_carousel">
-						<a href="" class="news-link"><img src="{{ STATIC_URL }}images/dems.jpg" alt="Alt text" title="title text" />
+						<a href="" class="news-link"><img src="/static/images/dems.jpg" alt="Alt text" title="title text" />
 						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
 					</div>
 				</li>
@@ -49,7 +49,7 @@
 	</div>
 	<div id="article-synopsis">
 		<div id="synopsis-logo">
-			<img class="article-source" src="{% if source.logo != '' %}{{ STATIC_URL }}logo/{{ source.logo }}{% else %}{{ STATIC_URL }}images/logo-AP.gif{% endif %}" alt="AP" title="AP" />
+			<img class="article-source" src="{% if source.logo != '' %}/static/logo/{{ source.logo }}{% else %}/static/images/logo-AP.gif{% endif %}" alt="AP" title="AP" />
 		</div>
 		<div id="synopsis-header">			
 			<ul id="synopsis_banner" class="h_nav">
