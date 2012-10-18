@@ -13,7 +13,7 @@ def index(request):
     return HttpResponse(t.render(c))
 
 def article_query(request, viewpoint):
-    stories = Story.objects.filter(viewpoint=viewpoint)
+    stories = Story.objects.filter(viewpoint=viewpoint).order_by('-date')
     t = loader.get_template('spectrum/article-query.html')
     c = Context ({'stories' : stories})
     return HttpResponse(t.render(c))
