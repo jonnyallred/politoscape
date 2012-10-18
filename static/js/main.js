@@ -171,7 +171,7 @@ function initPage() {
 
 
 function initIndexpage() { 
-	reloadArticles(8);
+	reloadArticles(0);
 	
 	$(window).resize(function(){
 		resizeFullArticles();

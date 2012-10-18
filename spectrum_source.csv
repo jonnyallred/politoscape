@@ -1,30 +1,60 @@
 "logo","id","url","name","short_name","viewpoint","img"
-"daily-kos.png","1","http://feeds.dailykos.com/dailykos/index.xml","Daily Kos","","-3","dailykos.png"
-"americablog.png","2","http://feeds.feedburner.com/Americablog","AMERICAblog","","-2","americablog.png"
-"wonkblog.jpeg","3","http://feeds.washingtonpost.com/rss/rss_ezra-klein","WonkBlog","","-1","wonkblog.png"
-"Firedoglake.jpeg","4","http://feeds.feedburner.com/firedoglake/fdl","firedoglake","","-3","firedoglake.jpeg"
-"the-conscience-liberal.png","5","http://krugman.blogs.nytimes.com/feed/","The Conscience of a Liberal","","-3","conscience-of-a-liberal.png"
-"huffington-post.png","6","http://www.huffingtonpost.com/feeds/verticals/politics/index.xml","The Huffington Post","","-2","huffington-post.png"
-"media-matters.png","7","http://feeds.mediamatters.org/mediamatters/latest","Media Matters for America","","-3","media-matters-for-america.png"
-"mother-jones-kevin-drum.png","8","http://motherjones.com/kevin-drum/feed","Kevin Drum","","-1","kevin-drum.jpeg"
-"WonketteLogo.png","9","http://feeds.wonkette.com/wonkette/feed","Wonkette","","-4","wonkette.png"
-"crooks-and-liars.jpeg","10","http://feeds.feedburner.com/crooksandliars/YaCP","Crooks and Liars","","-4","crooksandliars.jpeg"
-"talkingpointsmemo.jpeg","11","http://talkingpointsmemo.com/rssfeeds.php","Talking Points Memo","","-2","talking-points-memo.jpeg"
-"oliverwillis.jpeg","12","http://feeds.feedburner.com/OliverWillisLikeKryptoniteToStupid","Oliver Willis","","-4","oliver-willis.png"
-"newshounds.png","13","http://feeds.feedburner.com/NewsHounds","News Hounds","","-4","Newshounds.png"
-"political-wire.png","14","http://feeds.feedburner.com/PoliticalWire","Political Wire","","0","political-wire.gif"
-"politifact.jpeg","15","http://www.politifact.com/feeds/articles/truth-o-meter/","PolitiFact","","0","politifact.jpeg"
-"abc.jpeg","16","http://feeds.abcnews.com/politicsblog","ABC Politics","","0","abc.jpeg"
-"powerline.png","17","http://feeds.powerlineblog.com/powerlineblog/livefeed","Powerline","","2","powerline.png"
-"the-weekly-standard.gif","18","http://www.weeklystandard.com/weblogs/TWSFP/atom.xml","The Weekly Standard","","3","weekly-standard.gif"
-"hot-air.png","19","http://feeds.feedburner.com/hotair/main","Hot Air","","3","hot-air.jpeg"
-"national-review-corner.jpeg","20","http://www.nationalreview.com/corner/feed","The Corner","","4","the-corner.jpeg"
-"drudge-report.jpeg","21","http://feeds.feedburner.com/DrudgeReportFeed","The Drudge Report","","3","drudge-report.jpeg"
-"wsj.gif","22","http://online.wsj.com/xml/rss/3_7087.xml","Wall Street Journal Opinion","","1","wall-street-journal.gif"
-"fox-news.jpeg","23","http://feeds.foxnews.com/foxnews/politics","Fox News Politics","","3","fox-news.jpeg"
-"legal-insurrection.png","24","http://feeds.feedburner.com/LegalInsurrection","Legal Insurrection","","1","legal-insurrection.png"
-"volokh.png","25","http://volokh.com/","The Volokh Conspiracy","","1","the-volokh-conspiracy.jpeg"
-"Instapundit.png","26","http://feeds.feedburner.com/instapundit/main","Instapundit","","2","Instapundit.png"
-"red-state.jpeg","27","http://feeds.feedburner.com/redstate","RedState","","3","red-state.png	"
-"big-journalism.png","28","http://feeds.feedburner.com/BigJournalism","Big Journalism","","2","big-journalism.png"
-"riehl-worldview.png","29","http://www.riehlworldview.com/carnivorous_conservative/atom.xml","Riehl Worldview","","4","riehl-world-view.png"
+"daily-kos.png
+","1","http://feeds.dailykos.com/dailykos/index.xml","Daily Kos","","-3","dailykos.png"
+"americablog.png
+","2","http://feeds.feedburner.com/Americablog","AMERICAblog","","-2","americablog.png"
+"wonkblog.jpeg
+","3","http://feeds.washingtonpost.com/rss/rss_ezra-klein","WonkBlog","","-1","wonkblog.png"
+"Firedoglake.jpeg
+","4","http://feeds.feedburner.com/firedoglake/fdl","firedoglake","","-3","firedoglake.jpeg"
+"the-conscience-liberal.png
+","5","http://krugman.blogs.nytimes.com/feed/","The Conscience of a Liberal","","-3","conscience-of-a-liberal.png"
+"huffington-post.png
+","6","http://www.huffingtonpost.com/feeds/verticals/politics/index.xml","The Huffington Post","","-2","huffington-post.png"
+"media-matters.png
+","7","http://feeds.mediamatters.org/mediamatters/latest","Media Matters for America","","-3","media-matters-for-america.png"
+"mother-jones-kevin-drum.png
+","8","http://motherjones.com/kevin-drum/feed","Kevin Drum","","-1","kevin-drum.jpeg"
+"WonketteLogo.png
+","9","http://feeds.wonkette.com/wonkette/feed","Wonkette","","-4","wonkette.png"
+"crooks-and-liars.jpeg
+","10","http://feeds.feedburner.com/crooksandliars/YaCP","Crooks and Liars","","-4","crooksandliars.jpeg"
+"talkingpointsmemo.jpeg
+","11","http://talkingpointsmemo.com/rssfeeds.php","Talking Points Memo","","-2","talking-points-memo.jpeg"
+"oliverwillis.jpeg
+","12","http://feeds.feedburner.com/OliverWillisLikeKryptoniteToStupid","Oliver Willis","","-4","oliver-willis.png"
+"newshounds.png
+","13","http://feeds.feedburner.com/NewsHounds","News Hounds","","-4","Newshounds.png"
+"political-wire.png
+","14","http://feeds.feedburner.com/PoliticalWire","Political Wire","","0","political-wire.gif"
+"politifact.jpeg
+","15","http://www.politifact.com/feeds/articles/truth-o-meter/","PolitiFact","","0","politifact.jpeg"
+"abc.jpeg
+","16","http://feeds.abcnews.com/politicsblog","ABC Politics","","0","abc.jpeg"
+"powerline.png
+","17","http://feeds.powerlineblog.com/powerlineblog/livefeed","Powerline","","2","powerline.png"
+"the-weekly-standard.gif
+","18","http://www.weeklystandard.com/weblogs/TWSFP/atom.xml","The Weekly Standard","","3","weekly-standard.gif"
+"hot-air.png
+","19","http://feeds.feedburner.com/hotair/main","Hot Air","","3","hot-air.jpeg"
+"national-review-corner.jpeg
+","20","http://www.nationalreview.com/corner/feed","The Corner","","4","the-corner.jpeg"
+"drudge-report.jpeg
+","21","http://feeds.feedburner.com/DrudgeReportFeed","The Drudge Report","","3","drudge-report.jpeg"
+"wsj.gif
+","22","http://online.wsj.com/xml/rss/3_7087.xml","Wall Street Journal Opinion","","1","wall-street-journal.gif"
+"fox-news.jpeg
+","23","http://feeds.foxnews.com/foxnews/politics","Fox News Politics","","3","fox-news.jpeg"
+"legal-insurrection.png
+","24","http://feeds.feedburner.com/LegalInsurrection","Legal Insurrection","","1","legal-insurrection.png"
+"volokh.png
+","25","http://volokh.com/","The Volokh Conspiracy","","1","the-volokh-conspiracy.jpeg
+"
+"Instapundit.png
+","26","http://feeds.feedburner.com/instapundit/main","Instapundit","","2","Instapundit.png"
+"red-state.jpeg
+","27","http://feeds.feedburner.com/redstate","RedState","","3","red-state.png	"
+"big-journalism.png
+","28","http://feeds.feedburner.com/BigJournalism","Big Journalism","","2","big-journalism.png"
+"riehl-worldview.png
+","29","http://www.riehlworldview.com/carnivorous_conservative/atom.xml","Riehl Worldview","","4","riehl-world-view.png"
