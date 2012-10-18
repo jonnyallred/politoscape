@@ -35,10 +35,3 @@ class Story(models.Model):
     def __unicode__(self):
         return "%s (%s)" % (self.title, self.source.name)
     
-class StoryAdmin(admin.ModelAdmin):
-    pass
-class SourceAdmin(admin.ModelAdmin):
-    pass
-admin.site.register(Story, StoryAdmin)
-admin.site.register(Source, SourceAdmin)
-
