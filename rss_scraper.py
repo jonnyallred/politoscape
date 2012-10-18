@@ -20,18 +20,12 @@ import feedparser     # available at http://code.google.com/p/feedparser/
 def store_entries(id, items, score=0):
     """ Takes a feed_id and a list of items and stores them in the DB """
     for entry in items:
-        try:
-            imgurl = imgscrape.largestImage(entry.link)
-        except Exception, e:
-            print e
-            imgurl = ""
         db_cursor.execute('INSERT INTO spectrum_story \
-                           (source_id, url, title, content, date, viewpoint, \
-                            quality, img) \
+                           (source_id, url, title, content, date, viewpoint,) \
                            VALUES (?,?,?,?,?,?,?,?)', 
                           (id, entry.link, entry.title, entry.summary, 
                            strftime("%Y-%m-%d %H:%M:%S",entry.updated_parsed), 
-                           score, 0, imgurl))
+                           score))
  
 def retrieve_and_queue_entries():
     """ Get rss entries and queue them for processing """
@@ -63,21 +57,6 @@ db_connection = sqlite3.connect(DATABASE)
 db_connection.row_factory = sqlite3.Row
 db_cursor = db_connection.cursor()
  
-#insert initial values into feed database
-#rss_feeds = (('http://feeds.gawker.com/lifehacker/vip', 'lifehacker', 0),
-#             ('http://xkcd.com/rss.xml','xkcd', 1),
-#             ('http://feeds.wsjonline.com/wsj/xml/rss/3_7011.xml', 'wsj', -1),
-#             )
-
-feeds_file = "feeds.csv" 
- 
-with open(feeds_file, 'rb') as f:
-    reader = csv.reader(f)
-    for info in reader:
-        db_cursor.execute("INSERT INTO spectrum_source(url, name, viewpoint) \
-                           VALUES('%s', '%s', %d);" % 
-                           (info[0],info[2],int(info[3]))) #url, name, viewpoint
-
 THREAD_LIMIT = 20
 entries_to_process = Queue.Queue(THREAD_LIMIT)
 feeds_to_retrieve = grab_and_queue_feeds()
