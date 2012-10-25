@@ -1,6 +1,36 @@
 <div class="grid_12">
-{% for story in stories %}
 <div id="art_1_1" class="news_article_scroll row1">
+	<div class="article_tile">
+		<a href="#article-display" class="news-link" id="id-art_1_1">
+			<img src="{% if headline.0.img != '' %}{{ headline.0.img }}{% else %}{% if headline.0.source.img != '' %}/static/large_images/{{ headline.0.source.img}}{% else %}/static/images/clint.JPG{% endif %}{% endif %}" alt="Alt text" title="title text" />
+		<div class="article_title_title">{{ headline.0.title }}</div></a>
+	</div>
+</div> 
+<div id="art_1_2" class="news_article_scroll row1">					
+	<div class="article_tile">
+		<a href="#article-display" class="news-link" id="id-art_1_2">
+			<img src="{% if headline.1.img != '' %}{{ headline.1.img }}{% else %}{% if headline.1.source.img != '' %}/static/large_images/{{ headline.1.source.img}}{% else %}/static/images/clint.JPG{% endif %}{% endif %}" alt="Alt text" title="title text" />
+		<div class="article_title_title">{{ headline.1.title }}</div></a>
+	</div>
+</div> 
+<div id="art_1_3" class="news_article_scroll row1">
+	<div class="article_tile">
+		<a href="#article-display" class="news-link" id="id-art_1_3">
+			<img src="{% if headline.2.img != '' %}{{ headline.2.img }}{% else %}{% if headline.2.source.img != '' %}/static/large_images/{{ headline.2.source.img}}{% else %}/static/images/clint.JPG{% endif %}{% endif %}" alt="Alt text" title="title text" />
+		<div class="article_title_title">{{ headline.2.title }}</div></a>
+	</div>
+</div> 
+<div id="art_1_4" class="news_article_scroll row1 last">
+	<div class="article_tile">
+		<a href="#article-display" class="news-link" id="id-art_1_4">
+			<img src="{% if headline.3.img != '' %}{{ headline.3.img }}{% else %}{% if headline.3.source.img != '' %}/static/large_images/{{ headline.3.source.img}}{% else %}/static/images/clint.JPG{% endif %}{% endif %}" alt="Alt text" title="title text" />
+		<div class="article_title_title">{{ headline.3.title }}</div></a>
+	</div>
+</div> 
+</div>
+<div class="grid_12">
+{% for story in stories %}
+<div id="art_2_{{ forloop.counter }}" class="news_article_scroll {% cycle '' '' '' 'last' %}">
 	<div class="article_tile">
 		<a href="#article-display" class="news-link" id="art_{{ story.id }}">
 			<img src="{% if story.img != '' %}{{ story.img }}{% else %}{% if story.source.img != '' %}/static/large_images/{{ story.source.img}}{% else %}/static/images/clint.JPG{% endif %}{% endif %}" alt="Alt text" title="title text" />
@@ -8,13 +38,4 @@
 	</div>
 </div> 
 {% endfor %}
-<!-- 
-<div id="art_1_2" class="news_article_scroll row1">					
-	<div class="article_tile">
-		<a href="#article-display" class="news-link" id="id-art_1_2"><img src="images/gop.jpg" alt="Alt text" title="title text" />
-		<div class="article_title_title">Title goes here. Title goes here. Title goes here. Title goes here.</div></a>
-	</div>
 </div>
- -->
-
-</div

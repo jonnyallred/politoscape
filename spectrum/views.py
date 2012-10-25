@@ -14,6 +14,8 @@ def index(request):
 
 def article_query(request, viewpoint):
     stories = Story.objects.filter(viewpoint=viewpoint).order_by('-date')
+    headline = stories[4:]
+    stories = stories[:4]
     t = loader.get_template('spectrum/article-query.html')
     c = Context ({'stories' : stories})
     return HttpResponse(t.render(c))
