@@ -1,28 +1,28 @@
 <div class="grid_12">
 <div id="art_1_1" class="news_article_scroll row1">
 	<div class="article_tile">
-		<a href="#article-display" class="news-link" id="id-art_1_1">
+		<a href="#article-display" class="news-link" id="id-art_{{ headline.0.id }}_1">
 			<img src="{% if headline.0.img != '' %}{{ headline.0.img }}{% else %}{% if headline.0.source.img != '' %}/static/large_images/{{ headline.0.source.img}}{% else %}/static/images/clint.JPG{% endif %}{% endif %}" alt="Alt text" title="title text" />
 		<div class="article_title_title">{{ headline.0.title }}</div></a>
 	</div>
 </div> 
 <div id="art_1_2" class="news_article_scroll row1">					
 	<div class="article_tile">
-		<a href="#article-display" class="news-link" id="id-art_1_2">
+		<a href="#article-display" class="news-link" id="id-art_{{ headline.1.id }}_2">
 			<img src="{% if headline.1.img != '' %}{{ headline.1.img }}{% else %}{% if headline.1.source.img != '' %}/static/large_images/{{ headline.1.source.img}}{% else %}/static/images/clint.JPG{% endif %}{% endif %}" alt="Alt text" title="title text" />
 		<div class="article_title_title">{{ headline.1.title }}</div></a>
 	</div>
 </div> 
 <div id="art_1_3" class="news_article_scroll row1">
 	<div class="article_tile">
-		<a href="#article-display" class="news-link" id="id-art_1_3">
+		<a href="#article-display" class="news-link" id="id-art_{{ headline.2.id }}_3">
 			<img src="{% if headline.2.img != '' %}{{ headline.2.img }}{% else %}{% if headline.2.source.img != '' %}/static/large_images/{{ headline.2.source.img}}{% else %}/static/images/clint.JPG{% endif %}{% endif %}" alt="Alt text" title="title text" />
 		<div class="article_title_title">{{ headline.2.title }}</div></a>
 	</div>
 </div> 
 <div id="art_1_4" class="news_article_scroll row1 last">
 	<div class="article_tile">
-		<a href="#article-display" class="news-link" id="id-art_1_4">
+		<a href="#article-display" class="news-link" id="id-art_{{ headline.3.id }}_4">
 			<img src="{% if headline.3.img != '' %}{{ headline.3.img }}{% else %}{% if headline.3.source.img != '' %}/static/large_images/{{ headline.3.source.img}}{% else %}/static/images/clint.JPG{% endif %}{% endif %}" alt="Alt text" title="title text" />
 		<div class="article_title_title">{{ headline.3.title }}</div></a>
 	</div>

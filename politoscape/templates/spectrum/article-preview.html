@@ -2,48 +2,20 @@
 	<div class="preview-close"><a href="" class="btn-close">Close</a></div>	
 	<div id="article-views">
 		<div id="preview-feature">
-			<a href="{{ story.url }}" class="news-link"><img src="/static/images/clint.JPG" alt="Alt text" title="title text" />
+			<a href="{{ story.url }}" class="news-link"><img src="{% if story.img != '' %}{{ story.img }}{% else %}{% if story.source.img != '' %}/static/large_images/{{ story.source.img}}{% else %}/static/images/clint.JPG{% endif %}{% endif %}" alt="Alt text" title="title text" />
 			<div class="preview-feature-title"><p>{{ story.title }}</p><p>{{ source.name }}</p></div></a>
 		</div>
 		<div id="preview-other-carousel">
 			<div id="other-side"></div>				
 			<ul id="carousel-slider"  class="h_nav">
+			{% for other in other_side %}
 			  	<li>				
 					<div class="article_carousel">
-						<a href="" class="news-link"><img src="/static/images/gop.jpg" alt="Alt text" title="title text" />
-						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
+						<a href="{{ other.url }}" class="news-link"><img src="{% if other.img != '' %}{{ other.img }}{% else %}{% if other.source.img != '' %}/static/large_images/{{ other.source.img}}{% else %}/static/images/clint.JPG{% endif %}{% endif %}" alt="Alt txt" title="{{ other.title }}" />
+						<div class="other_title">{{ other.title }}</div></a>
 					</div>	
 				</li>
-				<li>		
-					<div class="article_carousel">
-						<a href="" class="news-link"><img src="/static/images/dems.jpg" alt="Alt text" title="title text" />
-						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
-					</div>
-				</li>
-				<li>	
-					<div class="article_carousel">
-						<a href="" class="news-link"><img src="/static/images/gop.jpg" alt="Alt text" title="title text" />
-						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
-					</div>		
-				</li>
-				<li>		
-					<div class="article_carousel">
-						<a href="" class="news-link"><img src="/static/images/dems.jpg" alt="Alt text" title="title text" />
-						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
-					</div>
-				</li>
-				<li>	
-					<div class="article_carousel">
-						<a href="" class="news-link"><img src="/static/images/gop.jpg" alt="Alt text" title="title text" />
-						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
-					</div>	
-				</li>
-				<li>			
-					<div class="article_carousel">
-						<a href="" class="news-link"><img src="/static/images/dems.jpg" alt="Alt text" title="title text" />
-						<div class="other_title">Title goes here. Title goes here. Title goes here.</div></a>
-					</div>
-				</li>
+			{% endfor %}
 			</ul>	
 		</div>
 	</div>
