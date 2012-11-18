@@ -3,7 +3,7 @@
 	<div id="article-views">
 		<div id="preview-feature">
 			<a href="{{ story.url }}" class="news-link"><img src="{% if story.img != '' %}{{ story.img }}{% else %}{% if story.source.img != '' %}/static/large_images/{{ story.source.img}}{% else %}/static/images/clint.JPG{% endif %}{% endif %}" alt="Alt text" title="title text" />
-			<div class="preview-feature-title"><p>{{ story.title }}</p><p>{{ source.name }}</p></div></a>
+			<div class="preview-feature-title"><p>{{ story.title|safe }}</p><p>{{ source.name }}</p></div></a>
 		</div>
 		<div id="preview-other-carousel">
 			<div id="other-side"></div>				
@@ -12,7 +12,7 @@
 			  	<li>				
 					<div class="article_carousel">
 						<a href="{{ other.url }}" class="news-link"><img src="{% if other.img != '' %}{{ other.img }}{% else %}{% if other.source.img != '' %}/static/large_images/{{ other.source.img}}{% else %}/static/images/clint.JPG{% endif %}{% endif %}" alt="Alt txt" title="{{ other.title }}" />
-						<div class="other_title">{{ other.title }}</div></a>
+						<div class="other_title">{{ other.title|safe }}</div></a>
 					</div>	
 				</li>
 			{% endfor %}
