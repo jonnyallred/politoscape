@@ -368,14 +368,14 @@ function initPreview() {
 }
 
 function reloadArticles(pValue) {
-	// left is 0 - 7
-	// center is 8
-	// right is 9 -16	 
+	// left is -1 - -8
+	// center is 0
+	// right is +1 - +8	 
 		 			
 	$.get("article_query/"+pValue+"/", 
 	{ },
 	function(data) {   
-		$('#contentbody').prepend(data);	
+		$('#contentbody').empty().prepend(data);	
 		resizeFullArticles();		
 	});	
 	
