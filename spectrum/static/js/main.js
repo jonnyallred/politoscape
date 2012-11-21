@@ -40,8 +40,8 @@ function initPage() {
 			$(this).hide();
 		})
 	;
-		  
-	 $('#li-login').click(function(e) {
+	/* 
+    $('#li-login').click(function(e) {
 		e.preventDefault();	
 		$('#modalCommentOverlay').show();
 		$('#facebook-login p').html('');
@@ -64,7 +64,6 @@ function initPage() {
 			$('#facebook-login p').html('To continue commenting, please login or register through Facebook or email');	  
 		});	
 	});	
-	
 	$('#li-search').click(function(e) {
 		e.preventDefault();	
 		$('#modalOverlay').show();
@@ -86,7 +85,7 @@ function initPage() {
 			$('#search-box').hide();		  
 		});	
 	});	
-		
+    */
 	$('#submit_btn').click(function(e) {
 		
 		e.preventDefault();
@@ -506,3 +505,4 @@ function decreaseFont(divID) {
 		$(divID).css('font-size',newFontSize+'px');
 	}
 }
+

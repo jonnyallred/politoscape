@@ -1,19 +1,19 @@
 id,name,url,short_name,viewpoint,img,logo
 1,Daily Kos,http://fulltextrssfeed.com/feeds.dailykos.com/dailykos/index.xml,,-3,dailykos.png,daily-kos.png
 2,AMERICAblog,http://fulltextrssfeed.com/feeds.feedburner.com/Americablog,,-2,americablog.png,americablog.png
-3,WonkBlog,http://feeds.washingtonpost.com/rss/rss_ezra-klein,,-1,wonkblog.png,wonkblog.jpeg
+3,WonkBlog,http://fulltextrssfeed.com/feeds.washingtonpost.com/rss/rss_ezra-klein,,-1,wonkblog.png,wonkblog.jpeg
 4,firedoglake,http://fulltextrssfeed.com/feeds.feedburner.com/firedoglake/fdl,,-3,firedoglake.jpeg,Firedoglake.jpeg
 5,The Conscience of a Liberal,http://krugman.blogs.nytimes.com/feed/,,-3,conscience-of-a-liberal.png,the-conscience-liberal.png
 6,The Huffington Post,http://fulltextrssfeed.com/www.huffingtonpost.com/feeds/verticals/politics/index.xml,,-2,huffington-post.png,huffington-post.png
-7,Media Matters for America,http://feeds.mediamatters.org/mediamatters/latest,,-3,media-matters-for-america.png,media-matters.png
+7,Media Matters for America,http://fulltextrssfeed.com/feeds.mediamatters.org/mediamatters/latest,,-3,media-matters-for-america.png,media-matters.png
 8,Kevin Drum,http://motherjones.com/kevin-drum/feed,,-1,kevin-drum.jpeg,mother-jones-kevin-drum.png
 9,Wonkette,http://fulltextrssfeed.com/feeds.wonkette.com/wonkette/feed,,-4,wonkette.png,WonketteLogo.png
 10,Crooks and Liars,http://feeds.feedburner.com/crooksandliars/YaCP,,-4,crooksandliars.jpeg,crooks-and-liars.jpeg
-11,Talking Points Memo,http://talkingpointsmemo.com/rssfeeds.php,,-2,talking-points-memo.jpeg,talkingpointsmemo.jpeg
+11,Talking Points Memo,http://fulltextrssfeed.com/talkingpointsmemo.com/rssfeeds.php,,-2,talking-points-memo.jpeg,talkingpointsmemo.jpeg
 12,Oliver Willis,http://feeds.feedburner.com/OliverWillisLikeKryptoniteToStupid,,-4,oliver-willis.png,oliverwillis.jpeg
 13,News Hounds,http://feeds.feedburner.com/NewsHounds,,-4,Newshounds.png,newshounds.png
 14,Political Wire,http://feeds.feedburner.com/PoliticalWire,,0,political-wire.gif,political-wire.png
-15,PolitiFact,http://www.politifact.com/feeds/articles/truth-o-meter/,,0,politifact.jpeg,politifact.jpeg
+15,PolitiFact,http://fulltextrssfeed.com/www.politifact.com/feeds/articles/truth-o-meter/,,0,politifact.jpeg,politifact.jpeg
 16,ABC Politics,http://fulltextrssfeed.com/feeds.abcnews.com/politicsblog,,0,abc.jpeg,abc.jpeg
 17,Powerline,http://fulltextrssfeed.com/feeds.powerlineblog.com/powerlineblog/livefeed,,2,powerline.png,powerline.png
 18,The Weekly Standard,http://www.weeklystandard.com/weblogs/TWSFP/atom.xml,,3,weekly-standard.gif,the-weekly-standard.gif
@@ -21,10 +21,10 @@ id,name,url,short_name,viewpoint,img,logo
 20,The Corner,http://fulltextrssfeed.com/www.nationalreview.com/corner/feed,,4,the-corner.jpeg,national-review-corner.jpeg
 21,The Drudge Report,http://fulltextrssfeed.com/feeds.feedburner.com/DrudgeReportFeed,,3,drudge-report.jpeg,drudge-report.jpeg
 22,Wall Street Journal Opinion,http://fulltextrssfeed.com/online.wsj.com/xml/rss/3_7087.xml,,1,wall-street-journal.gif,wsj.gif
-23,Fox News Politics,http://feeds.foxnews.com/foxnews/politics,,3,fox-news.jpeg,fox-news.jpeg
+23,Fox News Politics,http://fulltextrssfeed.com/feeds.foxnews.com/foxnews/politics,,3,fox-news.jpeg,fox-news.jpeg
 24,Legal Insurrection,http://fulltextrssfeed.com/feeds.feedburner.com/LegalInsurrection,,1,legal-insurrection.png,legal-insurrection.png
 25,The Volokh Conspiracy,http://volokh.com/,,1,the-volokh-conspiracy.jpeg,volokh.png
-26,Instapundit,http://feeds.feedburner.com/instapundit/main,,2,Instapundit.png,Instapundit.png
-27,RedState,http://feeds.feedburner.com/redstate,,3,"red-state.png	",red-state.jpeg
-28,Big Journalism,http://feeds.feedburner.com/BigJournalism,,2,big-journalism.png,big-journalism.png
+26,Instapundit,http://fulltextrssfeed.com/feeds.feedburner.com/instapundit/main,,2,Instapundit.png,Instapundit.png
+27,RedState,http://fulltextrssfeed.com/feeds.feedburner.com/redstate,,3,"red-state.png	",red-state.jpeg
+28,Big Journalism,http://fulltextrssfeed.com/feeds.feedburner.com/BigJournalism,,2,big-journalism.png,big-journalism.png
 29,Riehl Worldview,http://fulltextrssfeed.com/www.riehlworldview.com/carnivorous_conservative/atom.xml,,4,riehl-world-view.png,riehl-worldview.png
