@@ -36,6 +36,66 @@
 </script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>
+var username;
+
+  // Additional JS functions here
+  function login() {
+    FB.login(function(response) {
+        if (response.authResponse) {
+            // connected
+					testAPI();
+        } else {
+           testAPI();
+        }
+    });
+}
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+        console.log('Good to see you, ' + response.name + '.');
+		window.alert('Good to see you, ' + response.name + '.');
+		username = response.name;
+		console.log('test,'+username);
+    });
+}
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '434504009930845', // App ID
+      channelUrl : '//politoscape.webfactional.com/spectrum/channel.html', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+    // Additional init code here
+	
+FB.getLoginStatus(function(response) {
+    if (response.status === 'connected') {
+        testAPI();
+    } else if (response.status === 'not_authorized') {
+        // not_authorized
+        login();
+    } else {
+        // not_logged_in
+        login();
+    }
+});
+
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+</script>
+	
+	
 	<!-- {{ STATIC_URL }} -->
 	<div id="banner_band">
 		<div id="banner" class="grid_full">
@@ -45,12 +105,18 @@
 					Welcome,<br />
 					Username
 				</li>-->
-                <li><a href="#login-box" id="li-login">Login</a></li>					
+                <script language="JavaScript">
+                function coming_soon()
+                {
+                    window.alert("This feature is coming soon!")
+                }
+                </script>
+                <li><a href="javascript:login()" id="li-login">Login</a></li><!--href="#login-box"-->				
 				<li><a href="" id="li-refresh">Refresh</a></li>					
-				<li><a href="#search-box" id="li-search">Search</a></li>						
+				<li><a href="javascript:coming_soon()" id="li-search">Search</a></li><!--href="#search-box"-->						
 				<li><a href="/spectrum/" id="li-news">News</a></li>
-				<li><a href="/stats/" id="li-stats">Stats</a></li>
-				<li class="last"><a href="/act/" id="li-act">Act</a></li>
+				<li><a href="javascript:coming_soon()" id="li-stats">Stats</a></li><!--href="/stats/"-->
+				<li class="last"><a href="javascript:coming_soon()" id="li-act">Act</a></li><!-- href="/act/" -->
 			</ul>
 			<div id="search-box" class="hidden">
 				<form id="frmSearch" name="" action="" method="post">
@@ -71,10 +137,12 @@
 				<div id="slider"></div>
 			</div>	
 			<ul id="news_ul_footer" class="h_nav">
-				<li><a href="" class="election">2012 ELECTION</a></li>
+			
+		<!--	<script> document.write(username); </script>
+			<!--	<li><a href="" class="election">2012 ELECTION</a></li>
 				<li><a href="" class="headlines">HEADLINES</a></li>
-				<li class="last"><a href="" class="economics">ECONOMICS</a></li>
-			</ul>
+				<li class="last"><a href="javascript:coming_soon()" class="economics">ECONOMICS</a></li>
+		-->	</ul>
 			<div id="copy_article_footer">
 				<div class="copytext">
 					<img src="/static/images/polito.gif" alt="Copyright 2012 Politoscape" height="28" width="65" border="0">
@@ -118,6 +186,7 @@
 		
 		</div>
 	</div>
+    
 	
 	<div id="search-article-display" class="hidden">
 		<div id="search-article-header">

@@ -1173,6 +1173,50 @@ p.commenter-id {
 	padding:4px 0 8px;
 }
 
+
+#instructions {
+	position:fixed;
+	top:55px;
+	left:50%;
+	margin-left:-220px;
+	z-index:5556;
+	width:440px;
+	height:300px;
+	background-color:#303030;
+	color:#fff;
+	text-align:center;
+	padding:8px;
+}
+
+#instructions .para {
+	margin:0 auto 10px;
+}
+
+#instructions .top {
+	width:300px;
+	min-height:30px;
+	margin:0 auto 20px;
+}
+#instructions .instructions-close {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:9999;
+}
+
+.instructions-close a.btn-close {
+	background: url('../images/btn-close-sm.gif') top left no-repeat;
+	text-indent:-9999px;
+	display:block;
+	height:34px;
+	width:34px;
+}
+
+#instructions .top {
+	width:300px;
+	min-height:30px;
+	margin:0 auto 20px;
+}
 /* LOGIN/MEMBER */
 
 #facebook-login {
