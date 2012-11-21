@@ -58,43 +58,93 @@
 			<div class="grid_12 row">			
 				<div class="grid_6 border-right no_margin">					
 					<div id="frm_contact_support">
+
+                        <script>
+                        function sup_check()
+                        {
+                            if ($('#sup_fname').val() == ""
+                                || $('#sup_lname').val() == ""
+                                || $('#sup_email').val() == ""
+                                || $('#sup_body').val() == "")
+                            {
+                                alert("Please fill all required fields.");
+                            }
+                            else
+                            {
+                                $('#submit-support').submit();
+                                $('#sup_fname').val("");
+                                $('#sup_lname').val("");
+                                $('#sup_email').val("");
+                                $('#sup_body').val("");
+                                alert("Email sent!");
+                            }
+                        }
+                        function bus_check()
+                        {
+                            if ($('#bus_fname').val() == ""
+                                || $('#bus_lname').val() == ""
+                                || $('#bus_email').val() == ""
+                                || $('#bus_body').val() == "")
+                            {
+                                alert("Please fill all required fields.");
+                            }
+                            else
+                            {
+                                $('#submit-business').submit();
+                                $('#bus_fname').val("");
+                                $('#bus_lname').val("");
+                                $('#bus_email').val("");
+                                $('#bus_body').val("");
+                                alert("Email sent!");
+                            }
+                        }
+                        </script>
 						<h3>Support</h3> 
-						
-						
-						<form id="frm_support" name="frm_support" method="post" action="">
+						<form id="frm_support" name="frm_support" method="post" action="/static/email_catcher.php">
+                            <div class="frm-section">
+                                <input type="text" name="target" id="target" readonly type=hidden value="support@politoscape.com">
+                            </div>
 							<div class="frm-section">
-								<input type="text" name="fname" class="half fname" value="" /><input type="text" name="lname" class="halflast lname" value=""  />
+								<input type="text" name="fname" id="sup_fname" class="half fname" value="" />
+                                <input type="text" name="lname" id="sup_lname" class="halflast lname" value=""  />
 							</div>
 							<div class="frm-section">
-								<input type="text" name="email" value="" class="email" />
+								<input type="text" name="email" id="sup_email" value="" class="email" />
 							</div>
 							<div class="frm-section">
-								<textarea name="message" class="message" ></textarea>
+								<textarea name="message" id="sup_body" class="message" ></textarea>
 							</div>
 							<div class="frm-section">
-								<input type="button" name="submit-support" id="submit-support" value="" />
+								<input type="submit" name="submit-support" onclick="sup_check()" id="submit-support" value="" />
 							</div>
 						</form>
+                        
 						<div class="clear"></div>
 					</div>
 				</div>		
 				<div class="grid_6 no_margin">					
 					<div id="frm_contact_business">
-						<h3>Business</h3> 
-						<form id="frm_business" name="frm_business" method="post" action="">
+                        
+						<h3>Business</h3>
+						<form id="frm_business" name="frm_business" method="post" action="/static/email_catcher.php">
+                            <div class="frm-section">
+                                <input type="text" name="target" id="target" readonly type=hidden value="business@politoscape.com">
+                            </div>                            
 							<div class="frm-section">
-								<input type="text" name="fname" class="half fname" /><input type="text" name="lname" class="halflast lname" value=""  />
+								<input type="text" name="fname" id="bus_fname" class="half fname" />
+                                <input type="text" name="lname" id="bus_lname" class="halflast lname" value=""  />
 							</div>
 							<div class="frm-section">
-								<input type="text" name="email" value="" class="email" />
+								<input type="text" name="email" id="bus_email" value="" class="email" />
 							</div>
 							<div class="frm-section">
-								<textarea name="message" class="message" ></textarea>
+								<textarea name="message" id="bus_body" class="message" ></textarea>
 							</div>
 							<div class="frm-section">
-								<input type="button" name="submit-business" id="submit-business" value="" />
+								<input type="button" name="submit-business" onclick="bus_check()" id="submit-business" value="" />
 							</div>
 						</form>
+                        
 						<div class="clear"></div>
 					</div>
 				</div>	
