@@ -100,8 +100,8 @@
                         }
                         </script>
 						<h3>Support</h3> 
-						<form id="frm_support" name="frm_support" method="post" action="/static/email_catcher.php">
-                            <div class="frm-section">
+						<form id="frm_support" name="frm_support" method="post" action="mailto:support@politoscape.com" target="_blank">
+                           <!-- <div class="frm-section">
                                 <input type="text" name="target" id="target" readonly type=hidden value="support@politoscape.com">
                             </div>
 							<div class="frm-section">
@@ -112,10 +112,10 @@
 								<input type="text" name="email" id="sup_email" value="" class="email" />
 							</div>
 							<div class="frm-section">
-								<textarea name="message" id="sup_body" class="message" ></textarea>
-							</div>
+								<input type=textarea name="message" id="sup_body" class="message" ></textarea>
+							</div>-->
 							<div class="frm-section">
-								<input type="submit" name="submit-support" onclick="sup_check()" id="submit-support" value="" />
+								<input type="submit" id="submit-support" value="" />
 							</div>
 						</form>
                         
@@ -126,8 +126,8 @@
 					<div id="frm_contact_business">
                         
 						<h3>Business</h3>
-						<form id="frm_business" name="frm_business" method="post" action="/static/email_catcher.php">
-                            <div class="frm-section">
+						<form id="frm_business" name="frm_business" method="post" action="mailto:business@politoscape.com" target="_blank">
+                           <!-- <div class="frm-section">
                                 <input type="text" name="target" id="target" readonly type=hidden value="business@politoscape.com">
                             </div>                            
 							<div class="frm-section">
@@ -139,9 +139,9 @@
 							</div>
 							<div class="frm-section">
 								<textarea name="message" id="bus_body" class="message" ></textarea>
-							</div>
+							</div>-->
 							<div class="frm-section">
-								<input type="button" name="submit-business" onclick="bus_check()" id="submit-business" value="" />
+								<input type="submit" id="submit-business" value="" />
 							</div>
 						</form>
                         
